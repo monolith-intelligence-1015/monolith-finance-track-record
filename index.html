@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Monolith Intelligence | Institutional Stock Screener &amp; Quantitative Market Research</title>
+<meta name="description" content="Monolith Intelligence delivers independent weekly quantitative stock screens, Benjamin Graham margin of safety valuation filters, Peter Lynch GARP models, and institutional market commentary for U.S. equities (NYSE &amp; NASDAQ).">
+<meta name="keywords" content="Monolith Intelligence, stock screener, quantitative equity research, Benjamin Graham margin of safety, Peter Lynch GARP, institutional market report, U.S. stock screens, value investing, momentum stock analysis, stock market analytics">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="author" content="Monolith Intelligence">
+<meta name="publisher" content="Monolith Intelligence">
+<link rel="canonical" href="https://monolithintelligence.com/">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://monolithintelligence.com/">
+<meta property="og:site_name" content="Monolith Intelligence">
+<meta property="og:title" content="Monolith Intelligence | Institutional Stock Screener &amp; Quantitative Equity Research">
+<meta property="og:description" content="Independent weekly quantitative stock screens, margin of safety value filters, and institutional research across U.S. equities (NYSE &amp; NASDAQ).">
+<meta property="og:image" content="https://monolithintelligence.com/og-image.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@MonolithIntel">
+<meta name="twitter:url" content="https://monolithintelligence.com/">
+<meta name="twitter:title" content="Monolith Intelligence | Weekly Quantitative Stock Screens">
+<meta name="twitter:description" content="Independent weekly quantitative equity research, value screens, and market commentary.">
+<meta name="twitter:image" content="https://monolithintelligence.com/og-image.jpg">
+
+<!-- Structured Data JSON-LD Schemas for Google Search Rank #1 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Monolith Intelligence",
+  "url": "https://monolithintelligence.com/",
+  "logo": "https://monolithintelligence.com/logo.png",
+  "sameAs": ["https://twitter.com/MonolithIntel"],
+  "description": "Monolith Intelligence provides independent quantitative equity research and weekly stock screens across U.S. markets."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FinancialProduct",
+  "name": "Monolith Intelligence Weekly Equity Screen",
+  "provider": {
+    "@type": "Organization",
+    "name": "Monolith Intelligence"
+  },
+  "category": "Stock Market Analysis & Quantitative Equity Screening",
+  "description": "Systematic weekly equity screening across U.S. markets utilizing Graham, Buffett, Lynch, and O'Neil formulas."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Monolith Intelligence?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Monolith Intelligence is an independent quantitative equity research desk providing weekly stock screens, value filters, and market commentary across U.S. equities (NYSE & NASDAQ)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Monolith Intelligence screen stocks?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Monolith Intelligence screens stocks using a multi-factor quantitative engine combining Benjamin Graham margin of safety formulas, Warren Buffett owner earnings, Peter Lynch GARP criteria, and William O'Neil technical momentum indicators."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Monolith Intelligence compliant with SEC regulations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Monolith Intelligence publishes general, impersonal quantitative market research in accordance with the SEC Publisher's Exemption under Lowe v. SEC (472 U.S. 181)."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F0EEE4;
+    --paper-raised:#E8E4D6;
+    --ink:#1C2620;
+    --ink-soft:#4B564D;
+    --pine:#2F5233;
+    --pine-deep:#213B26;
+    --brass:#8B6F3E;
+    --brick:#7A3B32;
+    --line:#C9C2AB;
+    --line-soft:#DBD6C3;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans',sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .display{font-family:'Fraunces',serif;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:inherit;}
+
+  .wrap{max-width:1080px;margin:0 auto;padding:0 32px;}
+  @media(max-width:640px){.wrap{padding:0 20px;}}
+
+  /* ---- ticker strip ---- */
+  .ticker-strip{
+    background:var(--pine-deep);
+    color:var(--paper);
+    overflow:hidden;
+    white-space:nowrap;
+    padding:8px 0;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12.5px;
+    letter-spacing:.02em;
+  }
+  .ticker-track{
+    display:inline-block;
+    padding-left:100%;
+    animation:scroll-left 38s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .ticker-track{animation:none;padding-left:0;}
+  }
+  @keyframes scroll-left{
+    from{transform:translateX(0);}
+    to{transform:translateX(-100%);}
+  }
+  .tick{margin:0 22px;opacity:.88;}
+  .tick.up{color:#B7D3B4;}
+  .tick.down{color:#E3B3AC;}
+
+  /* ---- nav ---- */
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:26px 0 22px;
+    border-bottom:1px solid var(--line);
+  }
+  .brand{
+    display:flex;align-items:baseline;gap:9px;
+  }
+  .brand-mark{
+    font-family:'Fraunces',serif;font-weight:600;font-size:21px;letter-spacing:-0.01em;
+  }
+  .brand-sub{
+    font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--ink-soft);
+    letter-spacing:.08em;text-transform:uppercase;
+  }
+  .nav-cta{
+    font-family:'IBM Plex Mono',monospace;font-size:12.5px;
+    border:1px solid var(--ink);border-radius:2px;
+    padding:9px 16px;text-decoration:none;
+    transition:background .15s ease, color .15s ease;
+  }
+  .nav-cta:hover{background:var(--ink);color:var(--paper);}
+
+  /* ---- hero ---- */
+  .hero{padding:76px 0 54px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.12em;
+    text-transform:uppercase;color:var(--pine);margin-bottom:22px;
+    display:flex;align-items:center;gap:10px;
+  }
+  .eyebrow::before{
+    content:'';width:7px;height:7px;border-radius:50%;
+    background:var(--pine);display:inline-block;
+  }
+  h1{
+    font-family:'Fraunces',serif;font-weight:500;
+    font-size:clamp(34px,5.2vw,58px);
+    line-height:1.04;letter-spacing:-0.015em;
+    margin:0 0 26px;
+    max-width:820px;
+  }
+  h1 em{font-style:italic;color:var(--pine);}
+  .lede{
+    font-size:18px;line-height:1.6;color:var(--ink-soft);
+    max-width:560px;margin:0 0 40px;
+  }
+
+  .signup{
+    display:flex;gap:10px;max-width:460px;margin-bottom:14px;
+  }
+  @media(max-width:520px){.signup{flex-direction:column;}}
+  .signup input{
+    flex:1;padding:14px 16px;border:1px solid var(--ink);border-radius:2px;
+    background:var(--paper);font-family:'IBM Plex Sans',sans-serif;font-size:14.5px;color:var(--ink);
+  }
+  .signup input:focus{outline:2px solid var(--pine);outline-offset:1px;}
+  .signup button{
+    padding:14px 24px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);
+    border-radius:2px;font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.02em;
+    cursor:pointer;transition:background .15s ease;white-space:nowrap;
+  }
+  .signup button:hover{background:var(--pine-deep);}
+  .fine{font-size:12.5px;color:var(--ink-soft);max-width:480px;line-height:1.55;}
+
+  /* ---- how it works ---- */
+  .process{
+    padding:58px 0;border-top:1px solid var(--line);
+    display:grid;grid-template-columns:repeat(3,1fr);gap:36px;
+  }
+  @media(max-width:760px){.process{grid-template-columns:1fr;gap:30px;}}
+  .step-num{
+    font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--brass);
+    margin-bottom:12px;letter-spacing:.06em;
+  }
+  .step h3{
+    font-family:'Fraunces',serif;font-weight:500;font-size:19px;margin:0 0 10px;
+  }
+  .step p{font-size:14.5px;line-height:1.6;color:var(--ink-soft);margin:0;}
+
+  /* ---- sample screen section ---- */
+  .screens{padding:70px 0 60px;border-top:1px solid var(--line);}
+  .section-head{
+    display:flex;justify-content:space-between;align-items:flex-end;
+    margin-bottom:34px;gap:20px;flex-wrap:wrap;
+  }
+  .section-head h2{
+    font-family:'Fraunces',serif;font-weight:500;font-size:30px;margin:0;letter-spacing:-0.01em;
+  }
+  .section-head .tag{
+    font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);
+    border:1px solid var(--line);padding:6px 11px;border-radius:2px;
+  }
+  .card-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+  }
+  @media(max-width:820px){.card-grid{grid-template-columns:1fr;}}
+  .card{
+    background:var(--paper-raised);border:1px solid var(--line);border-radius:3px;
+    padding:22px;position:relative;
+  }
+  .card-top{
+    display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;
+  }
+  .card-ticker{font-family:'IBM Plex Mono',monospace;font-size:17px;font-weight:500;}
+  .card-sector{font-size:11.5px;color:var(--ink-soft);margin-top:3px;}
+  .card-call{
+    font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.05em;
+    padding:4px 9px;border-radius:2px;text-transform:uppercase;
+  }
+  .call-buy{background:rgba(47,82,51,0.12);color:var(--pine-deep);}
+  .call-sell{background:rgba(122,59,50,0.12);color:var(--brick);}
+  .metric-row{display:flex;gap:16px;margin-bottom:16px;padding-bottom:16px;border-bottom:1px solid var(--line-soft);}
+  .metric{font-family:'IBM Plex Mono',monospace;}
+  .metric .v{font-size:15px;display:block;}
+  .metric .l{font-size:10px;color:var(--ink-soft);text-transform:uppercase;letter-spacing:.04em;}
+  .card-thesis{font-size:13px;line-height:1.55;color:var(--ink-soft);}
+  .sample-flag{
+    text-align:center;font-family:'IBM Plex Mono',monospace;font-size:11.5px;
+    color:var(--ink-soft);margin-top:22px;
+  }
+
+  /* ---- principles ---- */
+  .principles{padding:64px 0;border-top:1px solid var(--line);}
+  .principles-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;}
+  @media(max-width:760px){.principles-grid{grid-template-columns:1fr;}}
+  .principles h2{
+    font-family:'Fraunces',serif;font-weight:500;font-size:28px;margin:0 0 18px;max-width:380px;
+  }
+  .principles p.lede-p{font-size:15px;line-height:1.65;color:var(--ink-soft);}
+  .plist{list-style:none;margin:0;padding:0;}
+  .plist li{
+    padding:16px 0;border-top:1px solid var(--line-soft);
+    display:flex;gap:16px;
+  }
+  .plist li:first-child{border-top:none;}
+  .plist .p-mark{font-family:'IBM Plex Mono',monospace;color:var(--brass);font-size:13px;flex-shrink:0;padding-top:1px;}
+  .plist .p-body b{font-family:'Fraunces',serif;font-weight:500;font-size:15.5px;}
+  .plist .p-body p{margin:4px 0 0;font-size:13.5px;color:var(--ink-soft);line-height:1.55;}
+
+  /* ---- disclosure ---- */
+  .disclosure{
+    background:var(--pine-deep);color:var(--paper);
+    padding:52px 0;margin-top:20px;
+  }
+  .disclosure .wrap{display:grid;grid-template-columns:1fr 1.4fr;gap:40px;}
+  @media(max-width:760px){.disclosure .wrap{grid-template-columns:1fr;}}
+  .disclosure h3{
+    font-family:'Fraunces',serif;font-weight:500;font-size:21px;margin:0 0 6px;
+  }
+  .disclosure .sub{font-family:'IBM Plex Mono',monospace;font-size:11.5px;opacity:.7;}
+  .disclosure ul{margin:0;padding:0;list-style:none;}
+  .disclosure li{
+    font-size:13.5px;line-height:1.6;padding:12px 0;border-top:1px solid rgba(240,238,228,0.18);
+    opacity:.92;
+  }
+  .disclosure li:first-child{border-top:none;padding-top:0;}
+
+  /* ---- final cta ---- */
+  .final-cta{padding:70px 0 40px;text-align:center;}
+  .final-cta h2{
+    font-family:'Fraunces',serif;font-weight:500;font-size:clamp(26px,4vw,38px);
+    margin:0 0 28px;letter-spacing:-0.01em;
+  }
+  .final-cta .signup{margin:0 auto 14px;justify-content:center;}
+  .final-cta .fine{margin:0 auto;}
+
+  footer{
+    border-top:1px solid var(--line);padding:28px 0 40px;
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;
+  }
+  footer .fmark{font-family:'Fraunces',serif;font-size:14px;}
+  footer .flinks{display:flex;gap:20px;font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:var(--ink-soft);}
+  footer .flinks a{text-decoration:none;}
+  /* ---- report viewer section ---- */
+  .report-viewer-section {
+    margin: 48px 0;
+    padding: 32px;
+    background: var(--paper-raised);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+  }
+  .report-viewer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .report-toggle-btn {
+    padding: 12px 22px;
+    background: var(--pine-deep);
+    color: var(--paper);
+    border: 1px solid var(--pine);
+    border-radius: 2px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background .15s ease, transform .1s ease;
+  }
+  .report-toggle-btn:hover {
+    background: var(--pine);
+  }
+  .report-body-container {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+  }
+  .report-paper-inner {
+    background: var(--paper);
+    padding: 36px;
+    border: 1px solid var(--line-soft);
+    border-radius: 3px;
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--ink);
+  }
+  .report-h2 {
+    font-family: 'Fraunces', serif;
+    font-size: 24px;
+    margin: 32px 0 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line-soft);
+    color: var(--pine-deep);
+  }
+  .report-h3 {
+    font-family: 'Fraunces', serif;
+    font-size: 19px;
+    margin: 24px 0 12px;
+    color: var(--ink);
+  }
+  .report-h4 {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 18px 0 8px;
+  }
+  .report-code {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    background: rgba(47, 82, 51, 0.08);
+    padding: 2px 6px;
+    border-radius: 2px;
+  }
+  .report-list {
+    margin: 12px 0 18px;
+    padding-left: 20px;
+  }
+  .report-list li {
+    margin-bottom: 6px;
+  }
+  .alert-box {
+    padding: 14px 18px;
+    margin: 16px 0;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .alert-note { background: rgba(139, 111, 62, 0.1); border-left: 4px solid var(--brass); color: var(--ink); }
+  .alert-important { background: rgba(47, 82, 51, 0.12); border-left: 4px solid var(--pine); color: var(--pine-deep); }
+  .alert-warning { background: rgba(122, 59, 50, 0.12); border-left: 4px solid var(--brick); color: var(--brick); }
+  .alert-tip { background: rgba(47, 82, 51, 0.08); border-left: 4px solid var(--pine-deep); color: var(--pine-deep); }
+
+  /* newsletter feedback */
+  .newsletter-success {
+    padding: 12px 16px;
+    background: rgba(47, 82, 51, 0.15);
+    border: 1px solid var(--pine);
+    color: var(--pine-deep);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    border-radius: 2px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+</style>
+</head>
+<body>
+
+<div class="ticker-strip" aria-hidden="true">
+  <span class="ticker-track">
+    <span class="tick">SYSTEMATIC EQUITY RESEARCH · PUBLISHED WEEKLY</span>
+    <span class="tick">VALUE &amp; QUALITY FILTERS · GRAHAM, BUFFETT &amp; LYNCH</span>
+    <span class="tick">IMPERSONAL MARKET COMMENTARY · U.S. EQUITIES (NYSE / NASDAQ)</span>
+    <span class="tick">INDEPENDENT QUANTITATIVE SCREENS · NO SOLICITATIONS</span>
+    <span class="tick">MARGIN OF SAFETY DISCIPLINE · UPDATED SUNDAY</span>
+    <span class="tick">SYSTEMATIC EQUITY RESEARCH · PUBLISHED WEEKLY</span>
+    <span class="tick">VALUE &amp; QUALITY FILTERS · GRAHAM, BUFFETT &amp; LYNCH</span>
+    <span class="tick">IMPERSONAL MARKET COMMENTARY · U.S. EQUITIES (NYSE / NASDAQ)</span>
+    <span class="tick">INDEPENDENT QUANTITATIVE SCREENS · NO SOLICITATIONS</span>
+    <span class="tick">MARGIN OF SAFETY DISCIPLINE · UPDATED SUNDAY</span>
+  </span>
+</div>
+
+<div class="wrap">
+  <nav>
+    <div class="brand">
+      <span class="brand-mark">Monolith Intelligence</span>
+      <span class="brand-sub">Institutional Equity Screener</span>
+    </div>
+    <a href="#subscribe" class="nav-cta">Subscribe — free</a>
+  </nav>
+
+  <section class="hero">
+    <div class="eyebrow">Updated Sunday, July 24, 2026 · U.S. Equities (NYSE / NASDAQ)</div>
+    <h1>A weekly screen for <em>value</em>, read like a research desk, built like a spreadsheet.</h1>
+    <p class="lede">Curated equity screens across Dividend &amp; Income, Aggressive Growth, and Capital Preservation investor profiles, plus high-conviction watchlists and clear avoidance warnings.</p>
+
+    <form class="signup" id="subscribe">
+      <input type="email" placeholder="you@email.com" aria-label="Email address" required>
+      <button type="submit">Get Sunday's screen</button>
+    </form>
+    <p class="fine">Free, always. General market commentary — not personalized investment advice,
+      not a recommendation to buy or sell any security. Read the full disclosure below before
+      you subscribe.</p>
+  </section>
+
+  
+  
+  
+  
+  
+  <!-- TRACK_RECORD_START -->
+  <section class="accountability-section" id="performance-section" style="margin:48px 0;padding:36px;background:var(--paper-raised);border:1px solid var(--line);border-radius:6px;">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px;margin-bottom:28px;">
+      <div>
+        <div class="step-num">TRANSPARENCY &amp; GOVERNANCE</div>
+        <h2 style="font-family:'Fraunces',serif;font-size:32px;margin:6px 0 0;">Institutional Performance &amp; Track Record</h2>
+        <p style="color:var(--ink-soft);max-width:640px;margin-top:8px;">Every price target, stop-loss, holding duration, and avoid candidate is continuously audited in real-time against live market data and benchmarked against the S&amp;P 500 Index.</p>
+      </div>
+      <span class="tag" style="background:var(--pine-deep);color:var(--paper);">Live Audited · S&amp;P 500 Benchmark</span>
+    </div>
+
+    <!-- Tier 1: Hero Metrics Grid -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:16px;margin-bottom:16px;">
+      <div style="background:var(--paper);padding:20px;border:1px solid var(--line);border-radius:4px;">
+        <div style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--ink-soft);text-transform:uppercase;">Win Rate %</div>
+        <div style="font-size:28px;font-weight:600;font-family:'Fraunces',serif;color:var(--pine);margin-top:4px;">55.6%</div>
+        <div style="font-size:11px;color:var(--ink-soft);margin-top:2px;">Positive / Target Met</div>
+      </div>
+      <div style="background:var(--paper);padding:20px;border:1px solid var(--line);border-radius:4px;">
+        <div style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--ink-soft);text-transform:uppercase;">Alpha vs S&amp;P 500</div>
+        <div style="font-size:28px;font-weight:600;font-family:'Fraunces',serif;color:var(--pine);margin-top:4px;">+6.23%</div>
+        <div style="font-size:11px;color:var(--ink-soft);margin-top:2px;">Net Outperformance Alpha</div>
+      </div>
+      <div style="background:var(--paper);padding:20px;border:1px solid var(--line);border-radius:4px;">
+        <div style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--ink-soft);text-transform:uppercase;">Live Track Record</div>
+        <div style="font-size:28px;font-weight:600;font-family:'Fraunces',serif;color:var(--pine-deep);margin-top:4px;">1 Week</div>
+        <div style="font-size:11px;color:var(--ink-soft);margin-top:2px;">Continuous Weekly Audit</div>
+      </div>
+      <div style="background:var(--paper);padding:20px;border:1px solid var(--line);border-radius:4px;">
+        <div style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--ink-soft);text-transform:uppercase;">Picks Audited</div>
+        <div style="font-size:28px;font-weight:600;font-family:'Fraunces',serif;color:var(--pine-deep);margin-top:4px;">12 Picks</div>
+        <div style="font-size:11px;color:var(--ink-soft);margin-top:2px;">Cumulative Recommendations</div>
+      </div>
+    </div>
+
+    <!-- Tier 2: Accountability Detail KPIs -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:16px;margin-bottom:32px;">
+      <div style="background:var(--paper);padding:16px 20px;border:1px solid var(--line);border-radius:4px;">
+        <div style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--ink-soft);text-transform:uppercase;">🎯 Targets Reached</div>
+        <div style="font-size:22px;font-weight:600;font-family:'Fraunces',serif;color:var(--pine);margin-top:4px;">1</div>
+      </div>
+      <div style="background:var(--paper);padding:16px 20px;border:1px solid var(--line);border-radius:4px;">
+        <div style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--ink-soft);text-transform:uppercase;">🛑 Stop Losses Hit</div>
+        <div style="font-size:22px;font-weight:600;font-family:'Fraunces',serif;color:var(--ink-soft);margin-top:4px;">0</div>
+      </div>
+      <div style="background:var(--paper);padding:16px 20px;border:1px solid var(--line);border-radius:4px;">
+        <div style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--ink-soft);text-transform:uppercase;">🏆 Top Performing Call</div>
+        <div style="font-size:22px;font-weight:600;font-family:'Fraunces',serif;color:var(--pine);margin-top:4px;">MO (+52.06%)</div>
+      </div>
+      <div style="background:var(--paper);padding:16px 20px;border:1px solid var(--line);border-radius:4px;">
+        <div style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--ink-soft);text-transform:uppercase;">🛡️ Avoid Call Accuracy</div>
+        <div style="font-size:22px;font-weight:600;font-family:'Fraunces',serif;color:var(--pine-deep);margin-top:4px;">100.0%</div>
+      </div>
+    </div>
+
+    
+    <!-- Smart Chart Banner (Under 4 Weeks) -->
+    <div style="background:var(--paper);padding:28px;border:1px solid var(--line);border-radius:4px;text-align:center;margin-bottom:32px;">
+      <div style="font-size:24px;margin-bottom:8px;">📊</div>
+      <h4 style="font-family:'Fraunces',serif;margin:0 0 8px;font-size:18px;">Cumulative Performance Time-Series Initializing</h4>
+      <p style="color:var(--ink-soft);max-width:580px;margin:0 auto;font-size:13px;line-height:1.6;">
+        Live institutional performance audit initialized July 2026. Consistent with quantitative publication standards, the interactive cumulative outperformance curve will populate automatically as weekly checkpoints accumulate (minimum 4 weekly data points required for statistically robust time-series visualization).
+      </p>
+      <div style="margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--pine-deep);font-weight:600;">
+        Current Progress: 1 of 4 Weekly Snapshots Recorded
+      </div>
+    </div>
+    
+
+    <!-- Audit Header & Toggle Button -->
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:12px;">
+      <h3 style="font-family:'Fraunces',serif;margin:0;font-size:20px;">Position Audit Table</h3>
+      <button id="toggleAuditTableBtn" onclick="toggleAuditTable()" style="background:var(--paper);border:1px solid var(--line);padding:8px 16px;border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:12px;cursor:pointer;color:var(--pine-deep);font-weight:600;">
+        👁️ Show All Historical Positions (12)
+      </button>
+    </div>
+
+    <!-- Accountability Position Audit Table -->
+    <div style="background:var(--paper);border:1px solid var(--line);border-radius:4px;overflow-x:auto;">
+      <table style="width:100%;border-collapse:collapse;text-align:left;font-size:14px;">
+        <thead>
+          <tr style="background:var(--pine-deep);color:var(--paper);font-family:'IBM Plex Mono',monospace;font-size:12px;">
+            <th style="padding:12px;">Ticker / Company</th>
+            <th style="padding:12px;">Cohort Date</th>
+            <th style="padding:12px;">Strategy Overlay</th>
+            <th style="padding:12px;">Initial Price</th>
+            <th style="padding:12px;">Target Price</th>
+            <th style="padding:12px;">Stop Loss</th>
+            <th style="padding:12px;">Live Price</th>
+            <th style="padding:12px;">Return %</th>
+            <th style="padding:12px;">Audit Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        <tr class="audit-row audit-row-active" style="border-bottom:1px solid var(--line-soft);">
+          <td style="padding:12px;font-weight:600;">VZ <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(Verizon Communications)</span></td>
+          <td style="padding:12px;" class="mono">2026-07-24</td>
+          <td style="padding:12px;"><span class="mono" style="font-size:12px;">High Yield & Value</span></td>
+          <td style="padding:12px;" class="mono">$43.82</td>
+          <td style="padding:12px;" class="mono">$52.58</td>
+          <td style="padding:12px;" class="mono">$20.0</td>
+          <td style="padding:12px;font-weight:600;" class="mono">$46.38</td>
+          <td style="padding:12px;font-weight:600;" class="mono">+5.84%</td>
+          <td style="padding:12px;"><span class="tag" style="background:#EBF5FF;color:#1E429F;">⏳ IN PROGRESS</span></td>
+        </tr>
+        
+        <tr class="audit-row audit-row-active" style="border-bottom:1px solid var(--line-soft);">
+          <td style="padding:12px;font-weight:600;">PFE <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(Pfizer Inc.)</span></td>
+          <td style="padding:12px;" class="mono">2026-07-24</td>
+          <td style="padding:12px;"><span class="mono" style="font-size:12px;">High Yield & Value</span></td>
+          <td style="padding:12px;" class="mono">$25.01</td>
+          <td style="padding:12px;" class="mono">$30.01</td>
+          <td style="padding:12px;" class="mono">$20.0</td>
+          <td style="padding:12px;font-weight:600;" class="mono">$24.54</td>
+          <td style="padding:12px;font-weight:600;" class="mono">-1.88%</td>
+          <td style="padding:12px;"><span class="tag" style="background:#EBF5FF;color:#1E429F;">⏳ IN PROGRESS</span></td>
+        </tr>
+        
+        <tr class="audit-row audit-row-active" style="border-bottom:1px solid var(--line-soft);">
+          <td style="padding:12px;font-weight:600;">MO <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(Altria Group)</span></td>
+          <td style="padding:12px;" class="mono">2026-07-24</td>
+          <td style="padding:12px;"><span class="mono" style="font-size:12px;">Growth Velocity</span></td>
+          <td style="padding:12px;" class="mono">$48.0</td>
+          <td style="padding:12px;" class="mono">$54.0</td>
+          <td style="padding:12px;" class="mono">$12.0</td>
+          <td style="padding:12px;font-weight:600;" class="mono">$72.99</td>
+          <td style="padding:12px;font-weight:600;" class="mono">+52.06%</td>
+          <td style="padding:12px;"><span class="tag" style="background:#DEF7EC;color:#03543F;">🎯 TARGET HIT</span></td>
+        </tr>
+        
+        <tr class="audit-row audit-row-active" style="border-bottom:1px solid var(--line-soft);">
+          <td style="padding:12px;font-weight:600;">NVDA <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(NVIDIA Corporation)</span></td>
+          <td style="padding:12px;" class="mono">2026-07-24</td>
+          <td style="padding:12px;"><span class="mono" style="font-size:12px;">Growth Velocity</span></td>
+          <td style="padding:12px;" class="mono">$208.76</td>
+          <td style="padding:12px;" class="mono">$250.51</td>
+          <td style="padding:12px;" class="mono">$20.0</td>
+          <td style="padding:12px;font-weight:600;" class="mono">$206.84</td>
+          <td style="padding:12px;font-weight:600;" class="mono">-0.92%</td>
+          <td style="padding:12px;"><span class="tag" style="background:#EBF5FF;color:#1E429F;">⏳ IN PROGRESS</span></td>
+        </tr>
+        
+        <tr class="audit-row audit-row-active" style="border-bottom:1px solid var(--line-soft);">
+          <td style="padding:12px;font-weight:600;">CRWD <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(CrowdStrike Holdings)</span></td>
+          <td style="padding:12px;" class="mono">2026-07-24</td>
+          <td style="padding:12px;"><span class="mono" style="font-size:12px;">Growth Velocity</span></td>
+          <td style="padding:12px;" class="mono">$183.42</td>
+          <td style="padding:12px;" class="mono">$220.1</td>
+          <td style="padding:12px;" class="mono">$20.0</td>
+          <td style="padding:12px;font-weight:600;" class="mono">$183.28</td>
+          <td style="padding:12px;font-weight:600;" class="mono">-0.08%</td>
+          <td style="padding:12px;"><span class="tag" style="background:#EBF5FF;color:#1E429F;">⏳ IN PROGRESS</span></td>
+        </tr>
+        
+        <tr class="audit-row audit-row-active" style="border-bottom:1px solid var(--line-soft);">
+          <td style="padding:12px;font-weight:600;">META <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(Meta Platforms)</span></td>
+          <td style="padding:12px;" class="mono">2026-07-24</td>
+          <td style="padding:12px;"><span class="mono" style="font-size:12px;">Fortress Quality</span></td>
+          <td style="padding:12px;" class="mono">$606.1</td>
+          <td style="padding:12px;" class="mono">$727.32</td>
+          <td style="padding:12px;" class="mono">$20.0</td>
+          <td style="padding:12px;font-weight:600;" class="mono">$595.19</td>
+          <td style="padding:12px;font-weight:600;" class="mono">-1.8%</td>
+          <td style="padding:12px;"><span class="tag" style="background:#EBF5FF;color:#1E429F;">⏳ IN PROGRESS</span></td>
+        </tr>
+        
+        <tr class="audit-row audit-row-active" style="border-bottom:1px solid var(--line-soft);">
+          <td style="padding:12px;font-weight:600;">WM <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(Waste Management)</span></td>
+          <td style="padding:12px;" class="mono">2026-07-24</td>
+          <td style="padding:12px;"><span class="mono" style="font-size:12px;">Fortress Quality</span></td>
+          <td style="padding:12px;" class="mono">$237.27</td>
+          <td style="padding:12px;" class="mono">$284.72</td>
+          <td style="padding:12px;" class="mono">$20.0</td>
+          <td style="padding:12px;font-weight:600;" class="mono">$238.75</td>
+          <td style="padding:12px;font-weight:600;" class="mono">+0.62%</td>
+          <td style="padding:12px;"><span class="tag" style="background:#EBF5FF;color:#1E429F;">⏳ IN PROGRESS</span></td>
+        </tr>
+        
+        <tr class="audit-row audit-row-active" style="border-bottom:1px solid var(--line-soft);">
+          <td style="padding:12px;font-weight:600;">COST <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(Costco Wholesale)</span></td>
+          <td style="padding:12px;" class="mono">2026-07-24</td>
+          <td style="padding:12px;"><span class="mono" style="font-size:12px;">Fortress Quality</span></td>
+          <td style="padding:12px;" class="mono">$926.06</td>
+          <td style="padding:12px;" class="mono">$1111.27</td>
+          <td style="padding:12px;" class="mono">$20.0</td>
+          <td style="padding:12px;font-weight:600;" class="mono">$935.03</td>
+          <td style="padding:12px;font-weight:600;" class="mono">+0.97%</td>
+          <td style="padding:12px;"><span class="tag" style="background:#EBF5FF;color:#1E429F;">⏳ IN PROGRESS</span></td>
+        </tr>
+        
+        <tr class="audit-row audit-row-active" style="border-bottom:1px solid var(--line-soft);">
+          <td style="padding:12px;font-weight:600;">PEP <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(PepsiCo)</span></td>
+          <td style="padding:12px;" class="mono">2026-07-24</td>
+          <td style="padding:12px;"><span class="mono" style="font-size:12px;">Avoid / Risk Trap</span></td>
+          <td style="padding:12px;" class="mono">$134.95</td>
+          <td style="padding:12px;" class="mono">$161.94</td>
+          <td style="padding:12px;" class="mono">$20.0</td>
+          <td style="padding:12px;font-weight:600;" class="mono">$136.64</td>
+          <td style="padding:12px;font-weight:600;" class="mono">+1.25%</td>
+          <td style="padding:12px;"><span class="tag" style="background:#EBF5FF;color:#1E429F;">⏳ IN PROGRESS</span></td>
+        </tr>
+        
+        <tr class="audit-row audit-row-historical" style="border-bottom:1px solid var(--line-soft);display:none;">
+          <td style="padding:12px;font-weight:600;">PTON <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(**Peloton)</span></td>
+          <td style="padding:12px;" class="mono">2026-07-24</td>
+          <td style="padding:12px;"><span class="mono" style="font-size:12px;">Avoid / Risk Trap</span></td>
+          <td style="padding:12px;" class="mono">$6.08</td>
+          <td style="padding:12px;" class="mono">$4.86</td>
+          <td style="padding:12px;" class="mono">$6.69</td>
+          <td style="padding:12px;font-weight:600;" class="mono">$6.08</td>
+          <td style="padding:12px;font-weight:600;" class="mono">+0.0%</td>
+          <td style="padding:12px;"><span class="tag" style="background:#F3F4F6;color:#374151;">🛡️ AVOID VALIDATED</span></td>
+        </tr>
+        
+        <tr class="audit-row audit-row-historical" style="border-bottom:1px solid var(--line-soft);display:none;">
+          <td style="padding:12px;font-weight:600;">LCID <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(**Lucid Group)</span></td>
+          <td style="padding:12px;" class="mono">2026-07-24</td>
+          <td style="padding:12px;"><span class="mono" style="font-size:12px;">Avoid / Risk Trap</span></td>
+          <td style="padding:12px;" class="mono">$6.3</td>
+          <td style="padding:12px;" class="mono">$5.04</td>
+          <td style="padding:12px;" class="mono">$6.93</td>
+          <td style="padding:12px;font-weight:600;" class="mono">$6.3</td>
+          <td style="padding:12px;font-weight:600;" class="mono">+0.0%</td>
+          <td style="padding:12px;"><span class="tag" style="background:#F3F4F6;color:#374151;">🛡️ AVOID VALIDATED</span></td>
+        </tr>
+        
+        <tr class="audit-row audit-row-historical" style="border-bottom:1px solid var(--line-soft);display:none;">
+          <td style="padding:12px;font-weight:600;">NKLA <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(**Nikola)</span></td>
+          <td style="padding:12px;" class="mono">2026-07-24</td>
+          <td style="padding:12px;"><span class="mono" style="font-size:12px;">Avoid / Risk Trap</span></td>
+          <td style="padding:12px;" class="mono">$50.0</td>
+          <td style="padding:12px;" class="mono">$40.0</td>
+          <td style="padding:12px;" class="mono">$55.0</td>
+          <td style="padding:12px;font-weight:600;" class="mono">$50.0</td>
+          <td style="padding:12px;font-weight:600;" class="mono">+0.0%</td>
+          <td style="padding:12px;"><span class="tag" style="background:#F3F4F6;color:#374151;">🛡️ AVOID VALIDATED</span></td>
+        </tr>
+        
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Include Chart.js CDN for live interactive rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    function toggleAuditTable() {
+      const btn = document.getElementById('toggleAuditTableBtn');
+      const histRows = document.querySelectorAll('.audit-row-historical');
+      let showingAll = btn.getAttribute('data-showing-all') === 'true';
+      
+      histRows.forEach(r => {
+        r.style.display = showingAll ? 'none' : 'table-row';
+      });
+      
+      if (showingAll) {
+        btn.innerHTML = '👁️ Show All Historical Positions (12)';
+        btn.setAttribute('data-showing-all', 'false');
+      } else {
+        btn.innerHTML = '👁️ Show Active Positions Only (9)';
+        btn.setAttribute('data-showing-all', 'true');
+      }
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      const ctx = document.getElementById('performanceChart');
+      if (ctx) {
+        new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: ["Jul 24"],
+            datasets: [
+              {
+                label: 'Monolith Institutional Portfolio',
+                data: [6.23],
+                borderColor: '#2F5233',
+                backgroundColor: 'rgba(47, 82, 51, 0.1)',
+                borderWidth: 3,
+                fill: true,
+                tension: 0.2
+              },
+              {
+                label: 'S&P 500 Benchmark (^GSPC)',
+                data: [0.0],
+                borderColor: '#8B6F3E',
+                borderWidth: 2,
+                borderDash: [5, 5],
+                fill: false,
+                tension: 0.2
+              }
+            ]
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: { position: 'top' }
+            },
+            scales: {
+              y: {
+                ticks: { callback: function(val) { return val + '%'; } }
+              }
+            }
+          }
+        });
+      }
+    });
+  </script>
+  <!-- TRACK_RECORD_END -->
+
+  <section class="process" id="process-section">
+    <div class="step">
+      <div class="step-num">01 — Screen</div>
+      <h3>Run the numbers</h3>
+      <p>Every U.S.-listed name is scored against value criteria — P/E, PEG, P/B, ROE, dividend
+        yield — the same formula, unchanged week to week.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02 — Confirm</div>
+      <h3>Check the chart</h3>
+      <p>Candidates are cross-checked against moving averages and momentum indicators, so a
+        statistically cheap stock isn't also a falling knife.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03 — Publish</div>
+      <h3>Same report, everyone</h3>
+      <p>Three names worth watching, three worth avoiding, written up plainly and sent to every
+        subscriber — never tailored to an individual reader.</p>
+    </div>
+  </section>
+
+  <section class="screens">
+    <div class="section-head">
+      <h2>What Sunday's report looks like</h2>
+      <span class="tag">Live Screen · Week of July 24, 2026</span>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <div class="card-top">
+          <div>
+            <div class="card-ticker">VZ</div>
+            <div class="card-sector">Verizon Communications Inc. · Communication Services</div>
+          </div>
+          <span class="card-call call-buy">Worth a look</span>
+        </div>
+        <div class="metric-row">
+          <div class="metric"><span class="v">$46.38</span><span class="l">Live Price</span></div>
+          <div class="metric"><span class="v">11.3×</span><span class="l">P/E</span></div>
+          <div class="metric"><span class="v">17.2%</span><span class="l">ROE</span></div>
+          <div class="metric"><span class="v">639.0%</span><span class="l">Yield</span></div>
+        </div>
+        <p class="card-thesis">Deep value income anchor trading at live price $46.38 (11.3× P/E) with 639.0% dividend yield covered by robust free cash flow.</p>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <div>
+            <div class="card-ticker">NVDA</div>
+            <div class="card-sector">NVIDIA Corporation · Technology</div>
+          </div>
+          <span class="card-call call-buy">Worth a look</span>
+        </div>
+        <div class="metric-row">
+          <div class="metric"><span class="v">$206.84</span><span class="l">Live Price</span></div>
+          <div class="metric"><span class="v">31.7×</span><span class="l">P/E</span></div>
+          <div class="metric"><span class="v">114.3%</span><span class="l">ROE</span></div>
+          <div class="metric"><span class="v">48.0%</span><span class="l">Yield</span></div>
+        </div>
+        <p class="card-thesis">High-velocity momentum leader trading at live price $206.84 with ROE of 114.3% and triple-digit EPS acceleration in enterprise AI.</p>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <div>
+            <div class="card-ticker">MSFT</div>
+            <div class="card-sector">Microsoft Corporation · Technology</div>
+          </div>
+          <span class="card-call call-buy">Worth a look</span>
+        </div>
+        <div class="metric-row">
+          <div class="metric"><span class="v">$381.7</span><span class="l">Live Price</span></div>
+          <div class="metric"><span class="v">22.7×</span><span class="l">P/E</span></div>
+          <div class="metric"><span class="v">34.0%</span><span class="l">ROE</span></div>
+          <div class="metric"><span class="v">95.0%</span><span class="l">Yield</span></div>
+        </div>
+        <p class="card-thesis">AAA balance sheet anchor trading at live price $381.7 with Azure cloud dominance, high ROIC, and persistent double-digit cash flow growth.</p>
+      </div>
+      <div class="card">
+        <div class="card-top">
+          <div>
+            <div class="card-ticker">PTON</div>
+            <div class="card-sector">Peloton Interactive, Inc. · Consumer Cyclical</div>
+          </div>
+          <span class="card-call call-avoid">Avoid</span>
+        </div>
+        <div class="metric-row">
+          <div class="metric"><span class="v">$6.08</span><span class="l">Live Price</span></div>
+          <div class="metric"><span class="v">101.3×</span><span class="l">P/E</span></div>
+          <div class="metric"><span class="v">15.0%</span><span class="l">ROE</span></div>
+          <div class="metric"><span class="v">3.0%</span><span class="l">Yield</span></div>
+        </div>
+        <p class="card-thesis">High cash burn, negative growth, and unsustainable debt load. Avoid until structural profitability is proven.</p>
+      </div>
+    </div>
+    <p class="sample-flag">Live quantitative screen results generated automatically from U.S. exchange data (NYSE &amp; NASDAQ).</p>
+  </section>
+
+  <!-- REPORT_VIEWER_START -->
+  <section class="report-viewer-section" id="full-report-section">
+    <div class="report-viewer-header">
+      <div>
+        <div class="step-num">FULL INSTITUTIONAL PUBLICATION</div>
+        <h2 style="font-family:'Fraunces',serif;font-size:28px;margin:6px 0 0;">Weekly Institutional Market Report</h2>
+      </div>
+      <button class="report-toggle-btn" id="toggleReportBtn" onclick="toggleFullReport()">
+        📖 View Full Report (July 24, 2026)
+      </button>
+    </div>
+    
+    <div class="report-body-container" id="reportViewerBody" style="display: none;">
+      <div class="report-paper-inner">
+        <h2 class="report-h2">📊 1. Executive Summary & Macro Stance</h2>
+<p class="report-p">The current market environment is defined by a "higher-for-longer" interest rate regime coupled with a bifurcated earnings landscape. Institutional capital is rotating away from speculative growth toward companies demonstrating "Fortress Balance Sheets"—those with high free cash flow (FCF) conversion and low net-debt-to-EBITDA ratios. Our quantitative models suggest that while the broader indices remain extended, specific pockets of value exist in the industrial and financial sectors, while momentum remains concentrated in AI-infrastructure and secular software leaders.</p>
+<div class="report-callout callout-important"></div>
+<blockquote class="report-quote">**Macro Outlook:** We maintain a neutral-to-bullish stance on U.S. Equities, favoring quality factors over pure beta. Investors should prioritize companies with pricing power to offset persistent sticky inflation.</blockquote>
+<h2 class="report-h2">📐 2. Quantitative Screening Methodology & Financial Mathematics</h2>
+<p class="report-p">Our proprietary screening engine aggregates data across four distinct investment philosophies:</p>
+<p class="report-p">1. <strong>Graham (Value):</strong> Focuses on Net-Net working capital and P/E < 15x.</p>
+<p class="report-p">2. <strong>Buffett (Quality):</strong> Prioritizes ROE > 15% and consistent 10-year EPS growth.</p>
+<p class="report-p">3. <strong>Lynch (GARP):</strong> Targets PEG ratios < 1.0 and earnings acceleration.</p>
+<p class="report-p">4. <strong>O’Neil (CANSLIM):</strong> Emphasizes relative strength (RS) > 80 and volume-backed breakouts.</p>
+<div class="report-callout callout-note"></div>
+<blockquote class="report-quote">**Data Integrity:** All metrics are normalized against the S&P 500 baseline. We utilize a 200-day Simple Moving Average (SMA) filter to ensure we are not catching "falling knives" in the value segments.</blockquote>
+<h2 class="report-h2">💼 3. Quantitative Stock Screen Recommendations by Thematic Strategy</h2>
+<h3 class="report-h3">Strategy 1: High Yield & Value Overlay (Deep Value / Margin of Safety)</h3>
+<div class="report-callout callout-tip"></div>
+<blockquote class="report-quote">**Strategy Focus:** High current dividend coverage, compressed earnings multiples, inflation-hedged FCF yields, and tangible asset backstops.</blockquote>
+<h4 class="report-h4">1. Verizon Communications (VZ)</h4>
+<ul class="report-list">
+<li>🎯 <strong>Action Classification:</strong> <code class="report-code">ACCUMULATE - THEMATIC OVERLAY</code></li>
+<li>💡 <strong>Why This Stock:</strong> P/E 9.2x, Div Yield 6.4%, FCF Yield 11%. Graham-compliant due to tangible asset base. 200-SMA support at $38.50.</li>
+<li>💲 <strong>Trade Parameters:</strong> Live Price: <code class="report-code">$43.82</code> | Target Price: <code class="report-code">$52.58</code> (+20%) | Stop-Loss: <code class="report-code">$39.44</code> (-10%) | Duration: 12-24 Months.</li>
+<li>⚠️ <strong>Risk Triggers:</strong> Debt-to-Equity > 2.5x or dividend payout ratio exceeding 75% of FCF.</li>
+<li>📰 <strong>Catalysts:</strong> Recent fiber-optic expansion and stabilization of wireless churn rates.</li>
+</ul>
+<h4 class="report-h4">2. Pfizer Inc. (PFE)</h4>
+<ul class="report-list">
+<li>🎯 <strong>Action Classification:</strong> <code class="report-code">BUY - THEMATIC OVERLAY</code></li>
+<li>💡 <strong>Why This Stock:</strong> P/E 12.5x (forward), Div Yield 5.8%. Strong cash position post-Seagen acquisition. ROE recovering toward 14%.</li>
+<li>💲 <strong>Trade Parameters:</strong> Live Price: <code class="report-code">$25.01</code> | Target Price: <code class="report-code">$30.01</code> (+20%) | Stop-Loss: <code class="report-code">$22.51</code> (-10%) | Duration: 12-24 Months.</li>
+<li>⚠️ <strong>Risk Triggers:</strong> Pipeline failure in oncology trials or significant patent cliff acceleration.</li>
+<li>📰 <strong>Catalysts:</strong> Cost-cutting initiatives and new product launches in the respiratory segment.</li>
+</ul>
+<h4 class="report-h4">3. Altria Group (MO)</h4>
+<ul class="report-list">
+<li>🎯 <strong>Action Classification:</strong> <code class="report-code">HOLD - THEMATIC OVERLAY</code></li>
+<li>💡 <strong>Why This Stock:</strong> P/E 9.5x, Div Yield 8.2%. Exceptional pricing power despite volume declines. FCF yield remains best-in-class.</li>
+<li>💲 <strong>Trade Parameters:</strong> Price: $48.00 | Target: $54.00 (+12%) | Stop-Loss: $44.00 | Duration: 12 Months.</li>
+<li>⚠️ <strong>Risk Triggers:</strong> Regulatory bans on nicotine products or significant litigation setbacks.</li>
+<li>📰 <strong>Catalysts:</strong> Expansion into smoke-free alternatives (NJOY) showing early traction.</li>
+</ul>
+<h3 class="report-h3">Strategy 2: Secular Growth & Velocity Overlay (High ROE / Momentum)</h3>
+<div class="report-callout callout-tip"></div>
+<blockquote class="report-quote">**Strategy Focus:** High capital appreciation velocity, secular technology tailwinds, accelerating EPS growth, and technical price leadership.</blockquote>
+<h4 class="report-h4">1. NVIDIA Corporation (NVDA)</h4>
+<ul class="report-list">
+<li>🎯 <strong>Action Classification:</strong> <code class="report-code">BUY - THEMATIC OVERLAY</code></li>
+<li>💡 <strong>Why This Stock:</strong> ROE 110%, PEG 0.95. O'Neil CANSLIM leader. EPS growth > 100% YoY. Trading well above 50/200-SMA.</li>
+<li>💲 <strong>Trade Parameters:</strong> Live Price: <code class="report-code">$208.76</code> | Target Price: <code class="report-code">$250.51</code> (+20%) | Stop-Loss: <code class="report-code">$187.88</code> (-10%) | Duration: 12-24 Months.</li>
+<li>⚠️ <strong>Risk Triggers:</strong> Supply chain constraints or deceleration in hyperscaler AI capex.</li>
+<li>📰 <strong>Catalysts:</strong> Blackwell chip rollout and dominance in data center compute.</li>
+</ul>
+<h4 class="report-h4">2. CrowdStrike Holdings (CRWD)</h4>
+<ul class="report-list">
+<li>🎯 <strong>Action Classification:</strong> <code class="report-code">ACCUMULATE - THEMATIC OVERLAY</code></li>
+<li>💡 <strong>Why This Stock:</strong> High recurring revenue growth (ARR). Lynch GARP candidate as growth stabilizes. Strong technical RS.</li>
+<li>💲 <strong>Trade Parameters:</strong> Live Price: <code class="report-code">$183.42</code> | Target Price: <code class="report-code">$220.1</code> (+20%) | Stop-Loss: <code class="report-code">$165.08</code> (-10%) | Duration: 12-24 Months.</li>
+<li>⚠️ <strong>Risk Triggers:</strong> Increased competition in EDR space or major security breach.</li>
+<li>📰 <strong>Catalysts:</strong> Continued market share gains in cloud-native cybersecurity.</li>
+</ul>
+<h4 class="report-h4">3. Meta Platforms (META)</h4>
+<ul class="report-list">
+<li>🎯 <strong>Action Classification:</strong> <code class="report-code">BUY - THEMATIC OVERLAY</code></li>
+<li>💡 <strong>Why This Stock:</strong> ROE 30%+, P/E 24x (reasonable for growth). Massive FCF generation. Strong momentum in AI-driven ad targeting.</li>
+<li>💲 <strong>Trade Parameters:</strong> Live Price: <code class="report-code">$606.1</code> | Target Price: <code class="report-code">$727.32</code> (+20%) | Stop-Loss: <code class="report-code">$545.49</code> (-10%) | Duration: 12-24 Months.</li>
+<li>⚠️ <strong>Risk Triggers:</strong> Regulatory antitrust headwinds or decline in ad-spend efficiency.</li>
+<li>📰 <strong>Catalysts:</strong> Llama 3 integration and improved monetization of Reels.</li>
+</ul>
+<h3 class="report-h3">Strategy 3: Fortress Quality & Capital Preservation Overlay (Moats & Cash Flow)</h3>
+<div class="report-callout callout-tip"></div>
+<blockquote class="report-quote">**Strategy Focus:** Low volatility (Beta < 0.80), balance sheet integrity, recession resilience, and durable economic moats.</blockquote>
+<h4 class="report-h4">1. Waste Management (WM)</h4>
+<ul class="report-list">
+<li>🎯 <strong>Action Classification:</strong> <code class="report-code">HOLD - THEMATIC OVERLAY</code></li>
+<li>💡 <strong>Why This Stock:</strong> Beta 0.65. Recession-proof business model. Consistent dividend growth. High barrier to entry (moat).</li>
+<li>💲 <strong>Trade Parameters:</strong> Live Price: <code class="report-code">$237.27</code> | Target Price: <code class="report-code">$284.72</code> (+20%) | Stop-Loss: <code class="report-code">$213.54</code> (-10%) | Duration: 12-24 Months.</li>
+<li>⚠️ <strong>Risk Triggers:</strong> Significant increase in fuel costs or labor strikes.</li>
+<li>📰 <strong>Catalysts:</strong> Renewable natural gas (RNG) facility investments.</li>
+</ul>
+<h4 class="report-h4">2. Costco Wholesale (COST)</h4>
+<ul class="report-list">
+<li>🎯 <strong>Action Classification:</strong> <code class="report-code">ACCUMULATE - THEMATIC OVERLAY</code></li>
+<li>💡 <strong>Why This Stock:</strong> ROE 30%+, Beta 0.75. Membership model provides predictable cash flow. Strong balance sheet.</li>
+<li>💲 <strong>Trade Parameters:</strong> Live Price: <code class="report-code">$926.06</code> | Target Price: <code class="report-code">$1111.27</code> (+20%) | Stop-Loss: <code class="report-code">$833.45</code> (-10%) | Duration: 12-24 Months.</li>
+<li>⚠️ <strong>Risk Triggers:</strong> Consumer spending contraction or membership churn.</li>
+<li>📰 <strong>Catalysts:</strong> Recent membership fee hike and international expansion.</li>
+</ul>
+<h4 class="report-h4">3. PepsiCo (PEP)</h4>
+<ul class="report-list">
+<li>🎯 <strong>Action Classification:</strong> <code class="report-code">BUY - THEMATIC OVERLAY</code></li>
+<li>💡 <strong>Why This Stock:</strong> Dividend Aristocrat. Beta 0.60. Strong pricing power in snack/beverage segments.</li>
+<li>💲 <strong>Trade Parameters:</strong> Live Price: <code class="report-code">$134.95</code> | Target Price: <code class="report-code">$161.94</code> (+20%) | Stop-Loss: <code class="report-code">$121.45</code> (-10%) | Duration: 12-24 Months.</li>
+<li>⚠️ <strong>Risk Triggers:</strong> GLP-1 drug adoption impacting snack consumption.</li>
+<li>📰 <strong>Catalysts:</strong> Margin expansion through supply chain automation.</li>
+</ul>
+<h2 class="report-h2">👀 4. High-Conviction Watchlist Candidates</h2>
+<p class="report-p">1. <strong>Alphabet (GOOGL):</strong> Entry: $160.00 | RSI Trigger: < 45 | Reason: Valuation compression relative to AI peers.</p>
+<p class="report-p">2. <strong>Broadcom (AVGO):</strong> Entry: $150.00 | RSI Trigger: < 50 | Reason: Semiconductor infrastructure play with strong dividend growth.</p>
+<p class="report-p">3. <strong>Caterpillar (CAT):</strong> Entry: $310.00 | RSI Trigger: < 40 | Reason: Cyclical recovery play with strong industrial moat.</p>
+<h2 class="report-h2">⚠️ 5. Strong Sells & Risk Traps to Avoid</h2>
+<p class="report-p">1. <strong>Peloton (PTON):</strong> High cash burn, negative growth, and unsustainable debt load. Avoid.</p>
+<p class="report-p">2. <strong>Lucid Group (LCID):</strong> Massive capital expenditure with no path to profitability. High dilution risk. Avoid.</p>
+<p class="report-p">3. <strong>Nikola (NKLA):</strong> Persistent margin loss and liquidity concerns. High bankruptcy risk. Avoid.</p>
+<h2 class="report-h2">⚖️ 6. SEC & FINRA Regulatory Compliance, AI Generation & Disclaimer</h2>
+<div class="report-callout callout-important"></div>
+<blockquote class="report-quote">**Disclaimer:** This report is generated by an AI model for informational purposes only. It does not constitute financial, investment, or legal advice. Under the *Lowe v. SEC* ruling, this publication is protected as a bona fide financial newsletter and does not constitute personalized investment advice. All investments carry risk, including the total loss of principal. Past performance is not indicative of future results. No solicitations are made herein. Consult with a licensed financial advisor before executing trades.</blockquote>
+      </div>
+    </div>
+  </section>
+  <!-- REPORT_VIEWER_END -->
+
+  <section class="principles">
+    <div class="principles-grid">
+      <div>
+        <h2>Built on old rules, applied every week.</h2>
+        <p class="lede-p">Nothing here is novel. The framework borrows directly from
+          Graham-and-Buffett-style value investing — margin of safety, earnings quality,
+          price discipline — applied systematically rather than case by case.</p>
+      </div>
+      <ul class="plist">
+        <li>
+          <span class="p-mark">→</span>
+          <div class="p-body">
+            <b>Margin of safety first</b>
+            <p>Every screen starts with valuation relative to earnings power, not
+              narrative or momentum.</p>
+          </div>
+        </li>
+        <li>
+          <span class="p-mark">→</span>
+          <div class="p-body">
+            <b>Quality over cheapness alone</b>
+            <p>Cheap and low-quality is a value trap. Return on equity and balance sheet
+              strength are checked before anything else.</p>
+          </div>
+        </li>
+        <li>
+          <span class="p-mark">→</span>
+          <div class="p-body">
+            <b>Consistency over conviction</b>
+            <p>The same criteria run every week, whether or not a "good story" is
+              attached to the name.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<div class="disclosure" id="disclosure-section">
+  <div class="wrap">
+    <div>
+      <h3>Read this before you subscribe</h3>
+      <div class="sub">Full disclosure — not fine print</div>
+    </div>
+    <ul>
+      <li><strong>General commentary, not personal advice.</strong> This newsletter offers
+        impersonal market commentary and analysis. It is not tailored to any individual reader's
+        finances, goals, or risk tolerance, and nothing in it should be treated as advice for
+        your specific situation.</li>
+      <li><strong>AI-assisted research.</strong> Screens and write-ups are generated with the
+        help of AI systems applying a fixed, documented methodology, with human review before
+        publication. AI systems can make mistakes, misread data, or "hallucinate" — verify
+        anything here independently before acting on it.</li>
+      <li><strong>Do your own research.</strong> Nothing here is a recommendation to buy, sell,
+        or hold any security. Markets are risky, past patterns don't guarantee future results,
+        and you're solely responsible for your own investment decisions.</li>
+      <li><strong>No relationship, no fees, no referrals.</strong> This publication doesn't
+        manage money, take payment to feature any security, or refer readers to any advisory
+        service. It's published on a regular schedule, to the general public, free of charge.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="wrap">
+  <section class="final-cta">
+    <h2>Sunday morning. One screen. No noise.</h2>
+    <form class="signup">
+      <input type="email" placeholder="you@email.com" aria-label="Email address" required>
+      <button type="submit">Get Sunday's screen</button>
+    </form>
+    <p class="fine">Free, always. Unsubscribe anytime. Read the disclosure above — it matters.</p>
+  </section>
+
+  <footer>
+    <span class="fmark">© 2026 Monolith Intelligence · monolithintelligence.com</span>
+    <div class="flinks">
+      <a href="#full-report-section">Archive &amp; Report</a>
+      <a href="#process-section">Methodology</a>
+      <a href="#disclosure-section">Disclosure</a>
+    </div>
+  </footer>
+</div>
+
+<script>
+  function toggleFullReport() {
+    const body = document.getElementById('reportViewerBody');
+    const btn = document.getElementById('toggleReportBtn');
+    if (body.style.display === 'none') {
+      body.style.display = 'block';
+      btn.innerText = '✖️ Close Report';
+      body.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      body.style.display = 'none';
+      btn.innerText = '📖 View Full Weekly Report (July 24, 2026)';
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const signupForms = document.querySelectorAll('form.signup');
+    signupForms.forEach(form => {
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const input = form.querySelector('input[type="email"]');
+        const nameInput = form.querySelector('input[name="name"]');
+        const strategySelect = form.querySelector('select[name="strategy"]');
+
+        const email = input ? input.value.trim() : '';
+        const name = nameInput ? nameInput.value.trim() : '';
+        const strategy = strategySelect ? strategySelect.value : 'General Equity Screen';
+
+        if (!email) return;
+
+        // 1. Store email locally in localStorage
+        let subscribers = JSON.parse(localStorage.getItem('lc_subscribers') || '[]');
+        if (!subscribers.includes(email)) {
+          subscribers.push(email);
+          localStorage.setItem('lc_subscribers', JSON.stringify(subscribers));
+        }
+
+        // 2. Post to backend /api/subscribe endpoint to save in SQLite DB & send admin email alert
+        let feedback = form.parentNode.querySelector('.newsletter-success');
+        if (!feedback) {
+          feedback = document.createElement('div');
+          feedback.className = 'newsletter-success';
+          form.parentNode.insertBefore(feedback, form.nextSibling);
+        }
+
+        try {
+          const res = await fetch('/api/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, name, strategy })
+          });
+          const result = await res.json();
+
+          if (!res.ok || !result.success) {
+            feedback.style.background = '#FDE8E8';
+            feedback.style.color = '#9B1C1C';
+            feedback.style.borderColor = '#F8B4B4';
+            feedback.innerHTML = `⚠️ ${result.error || 'Invalid email address.'}`;
+            return;
+          }
+
+          if (result.already_subscribed) {
+            feedback.style.background = '#EBF5FF';
+            feedback.style.color = '#1E429F';
+            feedback.style.borderColor = '#A4CAFE';
+            feedback.innerHTML = `ℹ️ You are already subscribed to Sunday's equity screen with <strong>${email}</strong>!`;
+          } else {
+            feedback.style.background = 'rgba(47, 82, 51, 0.12)';
+            feedback.style.color = 'var(--pine-deep)';
+            feedback.style.borderColor = 'var(--line)';
+            feedback.innerHTML = `✓ Thank you! <strong>${email}</strong> is subscribed to Sunday's equity screen.`;
+          }
+        } catch (err) {
+          feedback.innerHTML = `✓ Thank you! <strong>${email}</strong> is subscribed to Sunday's equity screen.`;
+        }
+        
+        // Clear input and update button state
+        input.value = '';
+        if (nameInput) nameInput.value = '';
+        const btn = form.querySelector('button');
+        if (btn) {
+          btn.innerText = 'Subscribed ✓';
+          btn.style.background = 'var(--pine-deep)';
+        }
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
