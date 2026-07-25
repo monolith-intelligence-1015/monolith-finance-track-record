@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BPRV6SMQHK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BPRV6SMQHK');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Growth Velocity Screening: Finding High-Momentum Market Leaders | Monolith Intelligence Blog</title>
+<meta name="description" content="A deep dive into our Growth Velocity overlay screening rule set: 25%+ EPS growth, ROE > 30%, and PEG < 1.8x.">
+<meta name="keywords" content="stock screener, value investing, growth stocks, quantitative finance">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://monolithintelligence.com/blog/growth-velocity-screening.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://monolithintelligence.com/blog/growth-velocity-screening.html">
+<meta property="og:title" content="Growth Velocity Screening: Finding High-Momentum Market Leaders">
+<meta property="og:description" content="A deep dive into our Growth Velocity overlay screening rule set: 25%+ EPS growth, ROE > 30%, and PEG < 1.8x.">
+<meta property="og:site_name" content="Monolith Intelligence">
+
+<!-- Structured Data Schema -->
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Growth Velocity Screening: Finding High-Momentum Market Leaders",
+  "description": "A deep dive into our Growth Velocity overlay screening rule set: 25%+ EPS growth, ROE > 30%, and PEG < 1.8x.",
+  "datePublished": "2026-07-24",
+  "author": {{
+    "@type": "Organization",
+    "name": "Monolith Intelligence"
+  }},
+  "publisher": {{
+    "@type": "Organization",
+    "name": "Monolith Intelligence",
+    "url": "https://monolithintelligence.com"
+  }}
+}}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F0EEE4;
+    --paper-raised:#E8E4D6;
+    --ink:#1C2620;
+    --ink-soft:#4B564D;
+    --pine:#2F5233;
+    --pine-deep:#213B26;
+    --brass:#8B6F3E;
+    --line:#C9C2AB;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans',sans-serif;
+    line-height:1.65;
+  }
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px;}
+  nav{
+    display:flex;align-items:center;justify-space:between;
+    padding:24px 0;border-bottom:1px solid var(--line);
+  }
+  .brand-mark{font-family:'Fraunces',serif;font-weight:600;font-size:20px;}
+  .brand-link{text-decoration:none;color:inherit;}
+  .article-header{padding:54px 0 32px;border-bottom:1px solid var(--line);}
+  .meta-tag{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--brass);text-transform:uppercase;letter-spacing:.08em;}
+  h1{font-family:'Fraunces',serif;font-size:clamp(28px,4vw,42px);margin:12px 0 18px;line-height:1.15;}
+  .article-body{padding:40px 0;font-size:16px;}
+  .article-body h2{font-family:'Fraunces',serif;font-size:24px;color:var(--pine-deep);margin:36px 0 16px;border-bottom:1px solid var(--line);}
+  .article-body h3{font-family:'Fraunces',serif;font-size:20px;margin:28px 0 12px;}
+  .signup-card{
+    background:var(--paper-raised);border:1px solid var(--line);padding:32px;border-radius:4px;margin:48px 0;text-align:center;
+  }
+  .signup-card h3{font-family:'Fraunces',serif;margin:0 0 10px;}
+  .signup-form{display:flex;gap:10px;max-width:440px;margin:18px auto 0;}
+  .signup-form input{flex:1;padding:12px;border:1px solid var(--ink);background:var(--paper);}
+  .signup-form button{padding:12px 20px;background:var(--pine-deep);color:#fff;border:none;cursor:pointer;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <a href="https://monolithintelligence.com" class="brand-link">
+      <span class="brand-mark">Monolith Intelligence</span>
+    </a>
+    <a href="https://monolithintelligence.com/#subscribe" style="font-family:'IBM Plex Mono',monospace;font-size:13px;">Subscribe — free</a>
+  </nav>
+
+  <header class="article-header">
+    <div class="meta-tag">Quantitative Research · 2026-07-24</div>
+    <h1>Growth Velocity Screening: Finding High-Momentum Market Leaders</h1>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--ink-soft);">Published by Monolith Intelligence Quantitative Desk</div>
+  </header>
+
+  <main class="article-body">
+    
+<h2>The Growth Velocity Framework</h2>
+<p>While value screening protects capital downside, high-conviction growth screening captures market outperformance during bull markets. Our Growth Velocity screen combines Peter Lynch GARP (Growth at a Reasonable Price) metrics with William O'Neil momentum filters.</p>
+
+<h2>Key Quantitative Screening Requirements</h2>
+<ul>
+  <li><strong>Quarterly EPS Growth YoY > 25.0%</strong>: Accelerating earnings per share is the primary driver of institutional buying.</li>
+  <li><strong>ROE > 30.0%</strong>: Exceptional return on equity indicates strong pricing power and economic moat.</li>
+  <li><strong>PEG Ratio < 1.8x</strong>: We avoid overpaying for growth. The Price/Earnings to Growth ratio ensures reasonable valuation.</li>
+  <li><strong>Positive Revenue Acceleration</strong>: Four consecutive quarters of revenue expansion.</li>
+</ul>
+
+
+    <div class="signup-card">
+      <h3>Get Sunday's Quantitative Screen Delivered Free</h3>
+      <p style="font-size:14px;color:var(--ink-soft);margin:0;">Join institutional investors receiving our weekly margin of safety stock screens every Sunday morning.</p>
+      <form class="signup-form" name="newsletter" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="newsletter">
+        <input type="email" name="email" placeholder="you@email.com" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </main>
+
+  <footer style="padding:40px 0;border-top:1px solid var(--line);font-size:12px;color:var(--ink-soft);text-align:center;">
+    © 2026 Monolith Intelligence · Operating under SEC Publisher's Exemption rules. Not personalized financial advice.
+  </footer>
+</div>
+
+</body>
+</html>

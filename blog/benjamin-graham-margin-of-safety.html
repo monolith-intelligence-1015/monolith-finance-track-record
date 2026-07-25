@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BPRV6SMQHK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BPRV6SMQHK');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Benjamin Graham Margin of Safety: Our Automated Screening Engine | Monolith Intelligence Blog</title>
+<meta name="description" content="How our quantitative engine automates Benjamin Graham's margin of safety stock screening rules across U.S. exchange equities.">
+<meta name="keywords" content="stock screener, value investing, growth stocks, quantitative finance">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://monolithintelligence.com/blog/benjamin-graham-margin-of-safety.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://monolithintelligence.com/blog/benjamin-graham-margin-of-safety.html">
+<meta property="og:title" content="Benjamin Graham Margin of Safety: Our Automated Screening Engine">
+<meta property="og:description" content="How our quantitative engine automates Benjamin Graham's margin of safety stock screening rules across U.S. exchange equities.">
+<meta property="og:site_name" content="Monolith Intelligence">
+
+<!-- Structured Data Schema -->
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Benjamin Graham Margin of Safety: Our Automated Screening Engine",
+  "description": "How our quantitative engine automates Benjamin Graham's margin of safety stock screening rules across U.S. exchange equities.",
+  "datePublished": "2026-07-24",
+  "author": {{
+    "@type": "Organization",
+    "name": "Monolith Intelligence"
+  }},
+  "publisher": {{
+    "@type": "Organization",
+    "name": "Monolith Intelligence",
+    "url": "https://monolithintelligence.com"
+  }}
+}}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F0EEE4;
+    --paper-raised:#E8E4D6;
+    --ink:#1C2620;
+    --ink-soft:#4B564D;
+    --pine:#2F5233;
+    --pine-deep:#213B26;
+    --brass:#8B6F3E;
+    --line:#C9C2AB;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans',sans-serif;
+    line-height:1.65;
+  }
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px;}
+  nav{
+    display:flex;align-items:center;justify-space:between;
+    padding:24px 0;border-bottom:1px solid var(--line);
+  }
+  .brand-mark{font-family:'Fraunces',serif;font-weight:600;font-size:20px;}
+  .brand-link{text-decoration:none;color:inherit;}
+  .article-header{padding:54px 0 32px;border-bottom:1px solid var(--line);}
+  .meta-tag{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--brass);text-transform:uppercase;letter-spacing:.08em;}
+  h1{font-family:'Fraunces',serif;font-size:clamp(28px,4vw,42px);margin:12px 0 18px;line-height:1.15;}
+  .article-body{padding:40px 0;font-size:16px;}
+  .article-body h2{font-family:'Fraunces',serif;font-size:24px;color:var(--pine-deep);margin:36px 0 16px;border-bottom:1px solid var(--line);}
+  .article-body h3{font-family:'Fraunces',serif;font-size:20px;margin:28px 0 12px;}
+  .signup-card{
+    background:var(--paper-raised);border:1px solid var(--line);padding:32px;border-radius:4px;margin:48px 0;text-align:center;
+  }
+  .signup-card h3{font-family:'Fraunces',serif;margin:0 0 10px;}
+  .signup-form{display:flex;gap:10px;max-width:440px;margin:18px auto 0;}
+  .signup-form input{flex:1;padding:12px;border:1px solid var(--ink);background:var(--paper);}
+  .signup-form button{padding:12px 20px;background:var(--pine-deep);color:#fff;border:none;cursor:pointer;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <a href="https://monolithintelligence.com" class="brand-link">
+      <span class="brand-mark">Monolith Intelligence</span>
+    </a>
+    <a href="https://monolithintelligence.com/#subscribe" style="font-family:'IBM Plex Mono',monospace;font-size:13px;">Subscribe — free</a>
+  </nav>
+
+  <header class="article-header">
+    <div class="meta-tag">Quantitative Research · 2026-07-24</div>
+    <h1>Benjamin Graham Margin of Safety: Our Automated Screening Engine</h1>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--ink-soft);">Published by Monolith Intelligence Quantitative Desk</div>
+  </header>
+
+  <main class="article-body">
+    
+<h2>Understanding the Margin of Safety Discipline</h2>
+<p>Benjamin Graham, the founding father of value investing, established the concept of the <strong>Margin of Safety</strong> in 1949. The fundamental premise is simple: buy equities at a significant discount to their intrinsic value to protect capital against human error, market volatility, and economic downturns.</p>
+
+<h2>Our 4 Core Factor Screening Rules</h2>
+<ul>
+  <li><strong>Price to Earnings (P/E) < 15.0x</strong>: We restrict value candidates to equities trading below historical market multiples.</li>
+  <li><strong>Debt to Equity < 0.50</strong>: Balance sheet health is mandatory. High debt loads erode intrinsic valuation during high-interest-rate environments.</li>
+  <li><strong>Return on Equity (ROE) > 15.0%</strong>: Sustainable capital compounding requires high management efficiency.</li>
+  <li><strong>Current Ratio > 2.0</strong>: Liquidity protection ensures working capital resilience.</li>
+</ul>
+
+<h2>Automated Continuous Audit</h2>
+<p>Every stock flagged by our quantitative screening engine is automatically tracked in real-time. We record entry price, target price, and stop-loss levels, auditing performance directly against the <strong>S&P 500 Index</strong>.</p>
+
+
+    <div class="signup-card">
+      <h3>Get Sunday's Quantitative Screen Delivered Free</h3>
+      <p style="font-size:14px;color:var(--ink-soft);margin:0;">Join institutional investors receiving our weekly margin of safety stock screens every Sunday morning.</p>
+      <form class="signup-form" name="newsletter" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="newsletter">
+        <input type="email" name="email" placeholder="you@email.com" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </main>
+
+  <footer style="padding:40px 0;border-top:1px solid var(--line);font-size:12px;color:var(--ink-soft);text-align:center;">
+    © 2026 Monolith Intelligence · Operating under SEC Publisher's Exemption rules. Not personalized financial advice.
+  </footer>
+</div>
+
+</body>
+</html>
