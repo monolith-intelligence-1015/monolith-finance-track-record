@@ -1,9 +1,8 @@
-# 🏛️ Monolith Intelligence — Institutional Quantitative Research & Live Track Record
+# 🏛️ Monolith Quant Engine — Proprietary Quantitative Research System
 
 [![Live Website](https://img.shields.com/badge/Website-monolithintelligence.com-2F5233?style=for-the-badge&logo=google-chrome)](https://monolithintelligence.com)
 [![Audit Status](https://img.shields.com/badge/Live_Audit-100%25_Transparent-8B6F3E?style=for-the-badge&logo=sqlite)](https://monolithintelligence.com/#performance-section)
 [![Publish Schedule](https://img.shields.com/badge/Publish_Schedule-Every_Sunday_8:00_AM_EST-blue?style=for-the-badge&logo=githubactions)](https://github.com/monolith-intelligence-1015/monolith-finance-track-record/actions)
-[![License: MIT](https://img.shields.com/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
 ---
 
