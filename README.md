@@ -14,14 +14,7 @@ Every position call, target price, stop-loss, and avoid recommendation is **cont
 
 ---
 
-## 🎯 Live Track Record & Key Performance Indicators
 
-- 🏆 **Win Rate**: **55.6%**
-- 📈 **Alpha vs. S&P 500**: **+6.23%**
-- ⏳ **Live Audit Window**: Continuous Weekly Cohorts
-- 🎯 **Targets Hit**: **1** | 🛑 **Stop Loss Hit**: **0**
-
----
 
 ## 📖 Public Transparency & Immutable Commit History
 
@@ -59,10 +52,13 @@ Our screening framework evaluates equities across three distinct thematic overla
 ├── data/
 │   ├── track_record.sqlite          # SQLite accountability database
 │   └── subscribers.sqlite           # Subscriber ledger
+├── blog/                            # SEO-optimized gamification & quant theory blog posts
 ├── src/
 │   ├── market_research_agent.py     # Quantitative screening engine
+│   ├── quant_filters.py             # Advanced screening logic (Sloan Ratio, Macro Swapping)
+│   ├── generate_blog_posts.py       # Automated SEO blog generator
 │   ├── performance_tracker.py       # Accountability audit & S&P 500 baseline engine
-│   ├── update_weekly_landing.py     # HTML renderer & Chart.js pre-processor
+│   ├── update_weekly_landing.py     # HTML renderer & UI pre-processor
 │   └── email_weekly_report.py       # Automated subscriber email dispatcher
 ├── netlify/
 │   └── functions/subscribe.js       # Netlify serverless email verification API

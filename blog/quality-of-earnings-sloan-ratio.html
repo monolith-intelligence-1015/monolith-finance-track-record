@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BPRV6SMQHK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BPRV6SMQHK');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quality of Earnings: Why the Sloan Ratio is Our Secret Weapon | Monolith Intelligence Blog</title>
+<meta name="description" content="How we use the Sloan Ratio and Accrual Anomalies to detect earnings manipulation and filter out low-quality growth traps before they collapse.">
+<meta name="keywords" content="stock screener, value investing, growth stocks, quantitative finance">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://monolithintelligence.com/blog/quality-of-earnings-sloan-ratio.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://monolithintelligence.com/blog/quality-of-earnings-sloan-ratio.html">
+<meta property="og:title" content="Quality of Earnings: Why the Sloan Ratio is Our Secret Weapon">
+<meta property="og:description" content="How we use the Sloan Ratio and Accrual Anomalies to detect earnings manipulation and filter out low-quality growth traps before they collapse.">
+<meta property="og:site_name" content="Monolith Intelligence">
+
+<!-- Structured Data Schema -->
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Quality of Earnings: Why the Sloan Ratio is Our Secret Weapon",
+  "description": "How we use the Sloan Ratio and Accrual Anomalies to detect earnings manipulation and filter out low-quality growth traps before they collapse.",
+  "datePublished": "2026-07-30",
+  "author": {{
+    "@type": "Organization",
+    "name": "Monolith Intelligence"
+  }},
+  "publisher": {{
+    "@type": "Organization",
+    "name": "Monolith Intelligence",
+    "url": "https://monolithintelligence.com"
+  }}
+}}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F0EEE4;
+    --paper-raised:#E8E4D6;
+    --ink:#1C2620;
+    --ink-soft:#4B564D;
+    --pine:#2F5233;
+    --pine-deep:#213B26;
+    --brass:#8B6F3E;
+    --line:#C9C2AB;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans',sans-serif;
+    line-height:1.65;
+  }
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px;}
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:44px 0 28px;border-bottom:1px solid var(--line);
+  }
+  .brand-mark{font-family:'Fraunces',serif;font-weight:600;font-size:20px;}
+  .brand-link{text-decoration:none;color:inherit;}
+  .article-header{padding:54px 0 32px;border-bottom:1px solid var(--line);}
+  .meta-tag{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--brass);text-transform:uppercase;letter-spacing:.08em;}
+  h1{font-family:'Fraunces',serif;font-size:clamp(28px,4vw,42px);margin:12px 0 18px;line-height:1.15;}
+  .article-body{padding:40px 0;font-size:16px;}
+  .article-body h2{font-family:'Fraunces',serif;font-size:24px;color:var(--pine-deep);margin:36px 0 16px;border-bottom:1px solid var(--line);}
+  .article-body h3{font-family:'Fraunces',serif;font-size:20px;margin:28px 0 12px;}
+  .signup-card{
+    background:var(--paper-raised);border:1px solid var(--line);padding:32px;border-radius:4px;margin:48px 0;text-align:center;
+  }
+  .signup-card h3{font-family:'Fraunces',serif;margin:0 0 10px;}
+  .signup-form{display:flex;gap:10px;max-width:440px;margin:18px auto 0;}
+  .signup-form input{flex:1;padding:12px;border:1px solid var(--ink);background:var(--paper);}
+  .signup-form button{padding:12px 20px;background:var(--pine-deep);color:#fff;border:none;cursor:pointer;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <a href="https://monolithintelligence.com" class="brand-link">
+      <span class="brand-mark">Monolith Intelligence</span>
+    </a>
+    <a href="https://monolithintelligence.com/#subscribe" style="font-family:'IBM Plex Mono',monospace;font-size:13px;">Subscribe — free</a>
+  </nav>
+
+  <header class="article-header">
+    <div class="meta-tag">Quantitative Research · 2026-07-30</div>
+    <h1>Quality of Earnings: Why the Sloan Ratio is Our Secret Weapon</h1>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--ink-soft);">Published by Monolith Intelligence Quantitative Desk</div>
+  </header>
+
+  <main class="article-body">
+    
+<h2>The Accrual Anomaly and Earnings Quality</h2>
+<p>Not all earnings are created equal. Richard Sloan's seminal research in 1996 proved that companies with high non-cash earnings (accruals) tend to underperform significantly in the future. Wall Street often prices stocks based on headline EPS, completely ignoring the cash-flow backing of those earnings.</p>
+
+<h2>Our Quantitative Implementation</h2>
+<p>Our screening engine calculates the Sloan Ratio dynamically for every ticker in our universe:</p>
+<ul>
+  <li><strong>Sloan Ratio = (Net Income - Operating Cash Flow - Investing Cash Flow) / Total Assets</strong></li>
+  <li><strong>Strict [-10%, 10%] Band</strong>: We instantly reject any company whose Sloan Ratio falls outside this band, classifying them as having "Accrual Anomalies."</li>
+  <li><strong>Result</strong>: By demanding that earnings are backed by hard cash flow, we eliminate accounting manipulation and secure a mathematically robust margin of safety.</li>
+</ul>
+
+
+    <div class="signup-card">
+      <h3>Get Sunday's Quantitative Screen Delivered Free</h3>
+      <p style="font-size:14px;color:var(--ink-soft);margin:0;">Join institutional investors receiving our weekly margin of safety stock screens every Sunday morning.</p>
+      <form class="signup-form" name="newsletter" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="newsletter">
+        <input type="email" name="email" placeholder="you@email.com" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </main>
+
+  <footer style="padding:40px 0;border-top:1px solid var(--line);font-size:12px;color:var(--ink-soft);text-align:center;">
+    © 2026 Monolith Intelligence · Operating under SEC Publisher's Exemption rules. Not personalized financial advice.
+  </footer>
+</div>
+
+</body>
+</html>
