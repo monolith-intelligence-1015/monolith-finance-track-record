@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BPRV6SMQHK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', 'G-BPRV6SMQHK');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Macro Swapping: Adapting to Treasury Yields and the VIX | Monolith Intelligence Blog</title>
+<meta name="description" content="Discover how our quantitative engine pivots factor weights between Quality, Value, and Momentum based on real-time 10Y Treasury yields and VIX volatility regimes.">
+<meta name="keywords" content="stock screener, value investing, growth stocks, quantitative finance">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://monolithintelligence.com/blog/dynamic-macro-swapping-treasury-vix.html">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://monolithintelligence.com/blog/dynamic-macro-swapping-treasury-vix.html">
+<meta property="og:title" content="Dynamic Macro Swapping: Adapting to Treasury Yields and the VIX">
+<meta property="og:description" content="Discover how our quantitative engine pivots factor weights between Quality, Value, and Momentum based on real-time 10Y Treasury yields and VIX volatility regimes.">
+<meta property="og:site_name" content="Monolith Intelligence">
+
+<!-- Structured Data Schema -->
+<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Dynamic Macro Swapping: Adapting to Treasury Yields and the VIX",
+  "description": "Discover how our quantitative engine pivots factor weights between Quality, Value, and Momentum based on real-time 10Y Treasury yields and VIX volatility regimes.",
+  "datePublished": "2026-07-30",
+  "author": {{
+    "@type": "Organization",
+    "name": "Monolith Intelligence"
+  }},
+  "publisher": {{
+    "@type": "Organization",
+    "name": "Monolith Intelligence",
+    "url": "https://monolithintelligence.com"
+  }}
+}}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F0EEE4;
+    --paper-raised:#E8E4D6;
+    --ink:#1C2620;
+    --ink-soft:#4B564D;
+    --pine:#2F5233;
+    --pine-deep:#213B26;
+    --brass:#8B6F3E;
+    --line:#C9C2AB;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans',sans-serif;
+    line-height:1.65;
+  }
+  .wrap{max-width:840px;margin:0 auto;padding:0 24px;}
+  nav{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:44px 0 28px;border-bottom:1px solid var(--line);
+  }
+  .brand-mark{font-family:'Fraunces',serif;font-weight:600;font-size:20px;}
+  .brand-link{text-decoration:none;color:inherit;}
+  .article-header{padding:54px 0 32px;border-bottom:1px solid var(--line);}
+  .meta-tag{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--brass);text-transform:uppercase;letter-spacing:.08em;}
+  h1{font-family:'Fraunces',serif;font-size:clamp(28px,4vw,42px);margin:12px 0 18px;line-height:1.15;}
+  .article-body{padding:40px 0;font-size:16px;}
+  .article-body h2{font-family:'Fraunces',serif;font-size:24px;color:var(--pine-deep);margin:36px 0 16px;border-bottom:1px solid var(--line);}
+  .article-body h3{font-family:'Fraunces',serif;font-size:20px;margin:28px 0 12px;}
+  .signup-card{
+    background:var(--paper-raised);border:1px solid var(--line);padding:32px;border-radius:4px;margin:48px 0;text-align:center;
+  }
+  .signup-card h3{font-family:'Fraunces',serif;margin:0 0 10px;}
+  .signup-form{display:flex;gap:10px;max-width:440px;margin:18px auto 0;}
+  .signup-form input{flex:1;padding:12px;border:1px solid var(--ink);background:var(--paper);}
+  .signup-form button{padding:12px 20px;background:var(--pine-deep);color:#fff;border:none;cursor:pointer;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <a href="https://monolithintelligence.com" class="brand-link">
+      <span class="brand-mark">Monolith Intelligence</span>
+    </a>
+    <a href="https://monolithintelligence.com/#subscribe" style="font-family:'IBM Plex Mono',monospace;font-size:13px;">Subscribe — free</a>
+  </nav>
+
+  <header class="article-header">
+    <div class="meta-tag">Quantitative Research · 2026-07-30</div>
+    <h1>Dynamic Macro Swapping: Adapting to Treasury Yields and the VIX</h1>
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--ink-soft);">Published by Monolith Intelligence Quantitative Desk</div>
+  </header>
+
+  <main class="article-body">
+    
+<h2>Regime-Aware Factor Investing</h2>
+<p>Static quantitative screens fail when macroeconomic regimes shift. A value-heavy portfolio that outperforms during a recession will inevitably lag during a liquidity-driven bull market. Institutional quant desks solve this using Macro Swapping.</p>
+
+<h2>How the Engine Interprets the Macro Environment</h2>
+<p>Before our engine runs a single stock screen, it reads the broader macroeconomic tape using two primary sensors:</p>
+<ul>
+  <li><strong>10-Year Treasury Yield (^TNX)</strong>: Represents the risk-free rate and discount factor.</li>
+  <li><strong>CBOE Volatility Index (^VIX)</strong>: Measures market fear and near-term instability.</li>
+</ul>
+
+<h2>The Three Algorithmic Regimes</h2>
+<ol>
+  <li><strong>Risk-Off (VIX > 25)</strong>: The algorithm aggressively pivots to Quality and Value. Momentum is mathematically discarded. We seek robust balance sheets and massive WACC spreads.</li>
+  <li><strong>High Rates (10Y > 4.5%)</strong>: The algorithm penalizes growth traps. Value takes a heavy weighting (60%+) as long-duration equities are re-rated downward.</li>
+  <li><strong>Neutral / Bull (VIX < 20, 10Y < 4.0%)</strong>: The engine unlocks Momentum factors, allowing the portfolio to chase high-velocity growth names while maintaining a minimum Quality baseline.</li>
+</ol>
+
+
+    <div class="signup-card">
+      <h3>Get Sunday's Quantitative Screen Delivered Free</h3>
+      <p style="font-size:14px;color:var(--ink-soft);margin:0;">Join institutional investors receiving our weekly margin of safety stock screens every Sunday morning.</p>
+      <form class="signup-form" name="newsletter" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="newsletter">
+        <input type="email" name="email" placeholder="you@email.com" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </main>
+
+  <footer style="padding:40px 0;border-top:1px solid var(--line);font-size:12px;color:var(--ink-soft);text-align:center;">
+    © 2026 Monolith Intelligence · Operating under SEC Publisher's Exemption rules. Not personalized financial advice.
+  </footer>
+</div>
+
+</body>
+</html>

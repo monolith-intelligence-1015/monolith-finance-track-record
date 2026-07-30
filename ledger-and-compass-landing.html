@@ -486,6 +486,14 @@
   
   
   
+  
+  
+  
+  
+  
+  
+  
+  
   <!-- TRACK_RECORD_START -->
   <section class="accountability-section" id="performance-section" style="margin:48px 0;padding:36px;background:var(--paper-raised);border:1px solid var(--line);border-radius:6px;">
     <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:16px;margin-bottom:28px;">
@@ -501,12 +509,12 @@
     <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));gap:16px;margin-bottom:16px;">
       <div style="background:var(--paper);padding:20px;border:1px solid var(--line);border-radius:4px;">
         <div style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--ink-soft);text-transform:uppercase;">Win Rate %</div>
-        <div style="font-size:28px;font-weight:600;font-family:'Fraunces',serif;color:var(--pine);margin-top:4px;">40.0%</div>
+        <div style="font-size:28px;font-weight:600;font-family:'Fraunces',serif;color:var(--pine);margin-top:4px;">100.0%</div>
         <div style="font-size:11px;color:var(--ink-soft);margin-top:2px;">Positive / Target Met</div>
       </div>
       <div style="background:var(--paper);padding:20px;border:1px solid var(--line);border-radius:4px;">
         <div style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--ink-soft);text-transform:uppercase;">Alpha vs S&amp;P 500</div>
-        <div style="font-size:28px;font-weight:600;font-family:'Fraunces',serif;color:var(--pine);margin-top:4px;">+0.01%</div>
+        <div style="font-size:28px;font-weight:600;font-family:'Fraunces',serif;color:var(--pine);margin-top:4px;">-1.25%</div>
         <div style="font-size:11px;color:var(--ink-soft);margin-top:2px;">Net Outperformance Alpha</div>
       </div>
       <div style="background:var(--paper);padding:20px;border:1px solid var(--line);border-radius:4px;">
@@ -516,7 +524,7 @@
       </div>
       <div style="background:var(--paper);padding:20px;border:1px solid var(--line);border-radius:4px;">
         <div style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--ink-soft);text-transform:uppercase;">Picks Audited</div>
-        <div style="font-size:28px;font-weight:600;font-family:'Fraunces',serif;color:var(--pine-deep);margin-top:4px;">8 Picks</div>
+        <div style="font-size:28px;font-weight:600;font-family:'Fraunces',serif;color:var(--pine-deep);margin-top:4px;">0 Picks</div>
         <div style="font-size:11px;color:var(--ink-soft);margin-top:2px;">Cumulative Recommendations</div>
       </div>
     </div>
@@ -533,7 +541,7 @@
       </div>
       <div style="background:var(--paper);padding:16px 20px;border:1px solid var(--line);border-radius:4px;">
         <div style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--ink-soft);text-transform:uppercase;">🏆 Top Performing Call</div>
-        <div style="font-size:22px;font-weight:600;font-family:'Fraunces',serif;color:var(--pine);margin-top:4px;">ALL (+0.09%)</div>
+        <div style="font-size:22px;font-weight:600;font-family:'Fraunces',serif;color:var(--pine);margin-top:4px;">N/A</div>
       </div>
       <div style="background:var(--paper);padding:16px 20px;border:1px solid var(--line);border-radius:4px;">
         <div style="font-size:11px;font-family:'IBM Plex Mono',monospace;color:var(--ink-soft);text-transform:uppercase;">🛡️ Avoid Call Accuracy</div>
@@ -542,24 +550,12 @@
     </div>
 
     
-    <!-- Smart Chart Banner (Under 4 Weeks) -->
-    <div style="background:var(--paper);padding:28px;border:1px solid var(--line);border-radius:4px;text-align:center;margin-bottom:32px;">
-      <div style="font-size:24px;margin-bottom:8px;">📊</div>
-      <h4 style="font-family:'Fraunces',serif;margin:0 0 8px;font-size:18px;">Cumulative Performance Time-Series Initializing</h4>
-      <p style="color:var(--ink-soft);max-width:580px;margin:0 auto;font-size:13px;line-height:1.6;">
-        Live institutional performance audit initialized July 2026. Consistent with quantitative publication standards, the interactive cumulative outperformance curve will populate automatically as weekly checkpoints accumulate (minimum 4 weekly data points required for statistically robust time-series visualization).
-      </p>
-      <div style="margin-top:12px;font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--pine-deep);font-weight:600;">
-        Current Progress: 1 of 4 Weekly Snapshots Recorded
-      </div>
-    </div>
-    
 
     <!-- Audit Header & Toggle Button -->
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:12px;">
       <h3 style="font-family:'Fraunces',serif;margin:0;font-size:20px;">Position Audit Table</h3>
       <button id="toggleAuditTableBtn" onclick="toggleAuditTable()" style="background:var(--paper);border:1px solid var(--line);padding:8px 16px;border-radius:4px;font-family:'IBM Plex Mono',monospace;font-size:12px;cursor:pointer;color:var(--pine-deep);font-weight:600;">
-        👁️ Show All Historical Positions (8)
+        👁️ Show All Historical Positions (0)
       </button>
     </div>
 
@@ -581,109 +577,11 @@
         </thead>
         <tbody>
           
-        <tr class="audit-row audit-row-historical" style="border-bottom:1px solid var(--line-soft);display:none;">
-          <td style="padding:12px;font-weight:600;">PTON <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(Peloton Interactive)</span></td>
-          <td style="padding:12px;" class="mono">2026-07-30</td>
-          <td style="padding:12px;"><span class="mono" style="font-size:12px;">Avoid / Risk Trap</span></td>
-          <td style="padding:12px;" class="mono">$6.37</td>
-          <td style="padding:12px;" class="mono">$5.1</td>
-          <td style="padding:12px;" class="mono">$7.01</td>
-          <td style="padding:12px;font-weight:600;" class="mono">$6.37</td>
-          <td style="padding:12px;font-weight:600;" class="mono">+0.0%</td>
-          <td style="padding:12px;"><span class="tag" style="background:#F3F4F6;color:#374151;">🛡️ AVOID VALIDATED</span></td>
-        </tr>
-        
-        <tr class="audit-row audit-row-historical" style="border-bottom:1px solid var(--line-soft);display:none;">
-          <td style="padding:12px;font-weight:600;">LCID <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(Lucid Group)</span></td>
-          <td style="padding:12px;" class="mono">2026-07-30</td>
-          <td style="padding:12px;"><span class="mono" style="font-size:12px;">Avoid / Risk Trap</span></td>
-          <td style="padding:12px;" class="mono">$7.93</td>
-          <td style="padding:12px;" class="mono">$6.34</td>
-          <td style="padding:12px;" class="mono">$8.72</td>
-          <td style="padding:12px;font-weight:600;" class="mono">$7.93</td>
-          <td style="padding:12px;font-weight:600;" class="mono">+0.0%</td>
-          <td style="padding:12px;"><span class="tag" style="background:#F3F4F6;color:#374151;">🛡️ AVOID VALIDATED</span></td>
-        </tr>
-        
-        <tr class="audit-row audit-row-historical" style="border-bottom:1px solid var(--line-soft);display:none;">
-          <td style="padding:12px;font-weight:600;">NKLA <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(Nikola Corporation)</span></td>
-          <td style="padding:12px;" class="mono">2026-07-30</td>
-          <td style="padding:12px;"><span class="mono" style="font-size:12px;">Avoid / Risk Trap</span></td>
-          <td style="padding:12px;" class="mono">$50.0</td>
-          <td style="padding:12px;" class="mono">$40.0</td>
-          <td style="padding:12px;" class="mono">$55.0</td>
-          <td style="padding:12px;font-weight:600;" class="mono">$50.0</td>
-          <td style="padding:12px;font-weight:600;" class="mono">+0.0%</td>
-          <td style="padding:12px;"><span class="tag" style="background:#F3F4F6;color:#374151;">🛡️ AVOID VALIDATED</span></td>
-        </tr>
-        
-        <tr class="audit-row audit-row-active" style="border-bottom:1px solid var(--line-soft);">
-          <td style="padding:12px;font-weight:600;">ALL <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(The Allstate Corporation)</span></td>
-          <td style="padding:12px;" class="mono">2026-07-30</td>
-          <td style="padding:12px;"><span class="mono" style="font-size:12px;">High Yield & Value</span></td>
-          <td style="padding:12px;" class="mono">$264.46</td>
-          <td style="padding:12px;" class="mono">$315.0</td>
-          <td style="padding:12px;" class="mono">$19.0</td>
-          <td style="padding:12px;font-weight:600;" class="mono">$264.69</td>
-          <td style="padding:12px;font-weight:600;" class="mono">+0.09%</td>
-          <td style="padding:12px;"><span class="tag" style="background:#EBF5FF;color:#1E429F;">⏳ IN PROGRESS</span></td>
-        </tr>
-        
-        <tr class="audit-row audit-row-active" style="border-bottom:1px solid var(--line-soft);">
-          <td style="padding:12px;font-weight:600;">CMCSA <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(Comcast Corporation)</span></td>
-          <td style="padding:12px;" class="mono">2026-07-30</td>
-          <td style="padding:12px;"><span class="mono" style="font-size:12px;">Growth Velocity</span></td>
-          <td style="padding:12px;" class="mono">$23.63</td>
-          <td style="padding:12px;" class="mono">$28.5</td>
-          <td style="padding:12px;" class="mono">$20.0</td>
-          <td style="padding:12px;font-weight:600;" class="mono">$23.63</td>
-          <td style="padding:12px;font-weight:600;" class="mono">+0.0%</td>
-          <td style="padding:12px;"><span class="tag" style="background:#EBF5FF;color:#1E429F;">⏳ IN PROGRESS</span></td>
-        </tr>
-        
-        <tr class="audit-row audit-row-active" style="border-bottom:1px solid var(--line-soft);">
-          <td style="padding:12px;font-weight:600;">MSFT <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(Microsoft Corporation)</span></td>
-          <td style="padding:12px;" class="mono">2026-07-30</td>
-          <td style="padding:12px;"><span class="mono" style="font-size:12px;">Growth Velocity</span></td>
-          <td style="padding:12px;" class="mono">$455.23</td>
-          <td style="padding:12px;" class="mono">$550.0</td>
-          <td style="padding:12px;" class="mono">$20.0</td>
-          <td style="padding:12px;font-weight:600;" class="mono">$454.87</td>
-          <td style="padding:12px;font-weight:600;" class="mono">-0.08%</td>
-          <td style="padding:12px;"><span class="tag" style="background:#EBF5FF;color:#1E429F;">⏳ IN PROGRESS</span></td>
-        </tr>
-        
-        <tr class="audit-row audit-row-active" style="border-bottom:1px solid var(--line-soft);">
-          <td style="padding:12px;font-weight:600;">GDDY <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(GoDaddy Inc.)</span></td>
-          <td style="padding:12px;" class="mono">2026-07-30</td>
-          <td style="padding:12px;"><span class="mono" style="font-size:12px;">Fortress Quality</span></td>
-          <td style="padding:12px;" class="mono">$99.04</td>
-          <td style="padding:12px;" class="mono">$135.0</td>
-          <td style="padding:12px;" class="mono">$36.0</td>
-          <td style="padding:12px;font-weight:600;" class="mono">$99.07</td>
-          <td style="padding:12px;font-weight:600;" class="mono">+0.03%</td>
-          <td style="padding:12px;"><span class="tag" style="background:#EBF5FF;color:#1E429F;">⏳ IN PROGRESS</span></td>
-        </tr>
-        
-        <tr class="audit-row audit-row-active" style="border-bottom:1px solid var(--line-soft);">
-          <td style="padding:12px;font-weight:600;">COR <span style="font-size:12px;font-weight:400;color:var(--ink-soft);">(Cencora, Inc.)</span></td>
-          <td style="padding:12px;" class="mono">2026-07-30</td>
-          <td style="padding:12px;"><span class="mono" style="font-size:12px;">Avoid / Risk Trap</span></td>
-          <td style="padding:12px;" class="mono">$312.79</td>
-          <td style="padding:12px;" class="mono">$360.0</td>
-          <td style="padding:12px;" class="mono">$15.0</td>
-          <td style="padding:12px;font-weight:600;" class="mono">$312.79</td>
-          <td style="padding:12px;font-weight:600;" class="mono">+0.0%</td>
-          <td style="padding:12px;"><span class="tag" style="background:#EBF5FF;color:#1E429F;">⏳ IN PROGRESS</span></td>
-        </tr>
-        
         </tbody>
       </table>
     </div>
   </section>
 
-  <!-- Include Chart.js CDN for live interactive rendering -->
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script>
     function toggleAuditTable() {
       const btn = document.getElementById('toggleAuditTableBtn');
@@ -695,60 +593,31 @@
       });
       
       if (showingAll) {
-        btn.innerHTML = '👁️ Show All Historical Positions (8)';
+        btn.innerHTML = '👁️ Show All Historical Positions (0)';
         btn.setAttribute('data-showing-all', 'false');
       } else {
-        btn.innerHTML = '👁️ Show Active Positions Only (5)';
+        btn.innerHTML = '👁️ Show Active Positions Only (0)';
         btn.setAttribute('data-showing-all', 'true');
       }
     }
-    document.addEventListener('DOMContentLoaded', () => {
-      const ctx = document.getElementById('performanceChart');
-      if (ctx) {
-        new Chart(ctx, {
-          type: 'line',
-          data: {
-            labels: ["Jul 30"],
-            datasets: [
-              {
-                label: 'Monolith Institutional Portfolio',
-                data: [0.01],
-                borderColor: '#2F5233',
-                backgroundColor: 'rgba(47, 82, 51, 0.1)',
-                borderWidth: 3,
-                fill: true,
-                tension: 0.2
-              },
-              {
-                label: 'S&P 500 Benchmark (^GSPC)',
-                data: [0.0],
-                borderColor: '#8B6F3E',
-                borderWidth: 2,
-                borderDash: [5, 5],
-                fill: false,
-                tension: 0.2
-              }
-            ]
-          },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-              legend: { position: 'top' }
-            },
-            scales: {
-              y: {
-                ticks: { callback: function(val) { return val + '%'; } }
-              }
-            }
-          }
-        });
-      }
-    });
   </script>
+  
+        <section style="margin:48px 0;padding:36px;background:var(--paper-raised);border:1px solid var(--line);border-radius:6px;text-align:center;">
+            <h3 style="font-family:'Fraunces',serif;margin:0 0 16px;">Subscribe to the Quant Output</h3>
+            <p style="color:var(--ink-soft);margin-bottom:24px;">Get the weekly audit and algorithmic screens delivered directly to your inbox.</p>
+            <form name="newsletter" method="POST" data-netlify="true" style="display:flex;justify-content:center;gap:8px;">
+                <input type="hidden" name="form-name" value="newsletter">
+                <input type="email" name="email" placeholder="Email Address" required style="padding:12px;border:1px solid var(--line);border-radius:4px;width:300px;font-family:inherit;"/>
+                <button type="submit" style="background:var(--pine-deep);color:white;border:none;padding:12px 24px;border-radius:4px;cursor:pointer;font-family:inherit;font-weight:600;">Subscribe</button>
+            </form>
+        </section>
+        
   <!-- TRACK_RECORD_END -->
 
-  <section class="process" id="process-section">
+
+
+
+<section class="process" id="process-section">
     <div class="step">
       <div class="step-num">01 — Screen</div>
       <h3>Run the numbers</h3>
@@ -775,54 +644,6 @@
       <span class="tag">Live Screen · Week of July 30, 2026</span>
     </div>
     <div class="card-grid">
-      <div class="card">
-        <div class="card-top">
-          <div>
-            <div class="card-ticker">ALL</div>
-            <div class="card-sector">The Allstate Corporation</div>
-          </div>
-          <span class="card-call call-buy">ACCUMULATE</span>
-        </div>
-        <div class="metric-row">
-          <div class="metric"><span class="v">$264.46</span><span class="l">Weekly Close</span></div>
-          <div class="metric"><span class="v">5.85x</span><span class="l">P/E</span></div>
-          <div class="metric"><span class="v">45.22%</span><span class="l">ROE</span></div>
-          <div class="metric"><span class="v">--</span><span class="l">Yield</span></div>
-        </div>
-        <p class="card-thesis">ALL presents a compelling Graham-style value proposition with a P/E of 5.85 and a robust ROE of 45.22%. The stock is trading well above its 200-SMA ($212.15), indicating strong trend support.</p>
-      </div>
-      <div class="card">
-        <div class="card-top">
-          <div>
-            <div class="card-ticker">CMCSA</div>
-            <div class="card-sector">Comcast Corporation</div>
-          </div>
-          <span class="card-call call-buy">BUY</span>
-        </div>
-        <div class="metric-row">
-          <div class="metric"><span class="v">$23.63</span><span class="l">Weekly Close</span></div>
-          <div class="metric"><span class="v">--</span><span class="l">P/E</span></div>
-          <div class="metric"><span class="v">--</span><span class="l">ROE</span></div>
-          <div class="metric"><span class="v">5.5%</span><span class="l">Yield</span></div>
-        </div>
-        <p class="card-thesis">With a 5.5% dividend yield and a P/B of 0.93, CMCSA is a classic deep-value play. Despite a high PEG, the low valuation relative to book value provides a significant margin of safety.</p>
-      </div>
-      <div class="card">
-        <div class="card-top">
-          <div>
-            <div class="card-ticker">MSFT</div>
-            <div class="card-sector">Microsoft Corporation</div>
-          </div>
-          <span class="card-call call-buy">BUY</span>
-        </div>
-        <div class="metric-row">
-          <div class="metric"><span class="v">$455.23</span><span class="l">Weekly Close</span></div>
-          <div class="metric"><span class="v">--</span><span class="l">P/E</span></div>
-          <div class="metric"><span class="v">--</span><span class="l">ROE</span></div>
-          <div class="metric"><span class="v">--</span><span class="l">Yield</span></div>
-        </div>
-        <p class="card-thesis">MSFT exhibits elite-tier ROE (34.01%) and massive net profit ($125.21B). It remains a technical leader with RSI (72.64) confirming strong momentum.</p>
-      </div>
     </div>
     <p class="sample-flag">Quantitative screen results extracted from this week's institutional report.</p>
   </section>
@@ -834,88 +655,44 @@
         <div class="step-num">FULL INSTITUTIONAL PUBLICATION</div>
         <h2 style="font-family:'Fraunces',serif;font-size:28px;margin:6px 0 0;">Weekly Institutional Market Report</h2>
       </div>
-      <button class="report-toggle-btn" id="toggleReportBtn" onclick="toggleFullReport()">
-        📖 View Full Report (July 30, 2026)
-      </button>
+      <div>
+          <a href="screener_output.csv" download class="report-toggle-btn" style="background:var(--ink);color:var(--paper);margin-right:12px;text-decoration:none;display:inline-block;">⬇️ Download CSV</a>
+          <button class="report-toggle-btn" id="toggleReportBtn" onclick="toggleFullReport()">
+            📖 View Full Report (July 30, 2026)
+          </button>
+      </div>
     </div>
     
     <div class="report-body-container" id="reportViewerBody" style="display: none;">
       <div class="report-paper-inner">
-        <h2 class="report-h2">📊 1. Executive Summary & Macro Stance</h2>
-<p class="report-p">The current U.S. equity landscape is characterized by a bifurcation between high-velocity AI-driven growth and deep-value defensive positioning. Our quantitative models indicate that while momentum remains elevated in the Technology and Financial Services sectors, the "Value Trap" risk is rising as interest rate expectations shift. Institutional capital is currently rotating into high-ROE, cash-generative entities that demonstrate resilience against inflationary pressures. We maintain a cautious, data-driven stance, prioritizing companies with strong balance sheets and clear paths to earnings accretion.</p>
-<h2 class="report-h2">📐 2. Quantitative Screening Methodology & Financial Mathematics</h2>
-<p class="report-p">Our proprietary screening engine utilizes a multi-factor approach to isolate alpha:</p>
-<ul class="report-list">
-<li>  <strong>Graham Value:</strong> Focuses on P/E < 15x, P/B < 1.5x, and consistent dividend history.</li>
-<li>  <strong>Lynch GARP:</strong> Targets PEG ratios < 1.0 and ROE > 20% to identify growth at a reasonable price.</li>
-<li>  <strong>O’Neil CANSLIM:</strong> Employs technical momentum (RSI/MACD) and institutional accumulation patterns to identify market leaders.</li>
-<li>  <strong>Risk Overlay:</strong> We filter out companies with excessive debt-to-equity ratios and negative cash flow trajectories to avoid "Value Traps."</li>
-</ul>
-<h2 class="report-h2">💼 3. Quantitative Stock Screen Recommendations by Thematic Strategy</h2>
-<h3 class="report-h3">Strategy 1: High Yield & Value Overlay (Deep Value / Margin of Safety)</h3>
-<div class="report-callout callout-tip"></div>
-<blockquote class="report-quote">**Strategy Focus:** High current dividend coverage, compressed earnings multiples, inflation-hedged FCF yields, and tangible asset backstops.</blockquote>
-<h4 class="report-h4">1. The Allstate Corporation (ALL)</h4>
-<ul class="report-list">
-<li>🎯 <strong>Action Classification:</strong> <code class="report-code">ACCUMULATE - THEMATIC OVERLAY</code></li>
-<li>💡 <strong>Why This Stock (Quantitative Thesis):</strong> ALL presents a compelling Graham-style value proposition with a P/E of 5.85 and a robust ROE of 45.22%. The stock is trading well above its 200-SMA ($212.15), indicating strong trend support.</li>
-<li>💲 <strong>Trade Parameters:</strong> Current Price: <code class="report-code">$264.46</code> | Target Price: <code class="report-code">$315.00 (+19%)</code> | Stop-Loss: <code class="report-code">$230.00 (-13%)</code> | Hold Duration: <code class="report-code">12-18 Months</code>.</li>
-<li>⚠️ <strong>Why Not / Disqualifying Risk Triggers:</strong> High Put-Call Ratio (3.23) suggests significant institutional hedging; a breach of the 50-SMA ($234.24) would invalidate the thesis.</li>
-<li>📰 <strong>Latest News & Catalysts:</strong> Recent earnings volatility and heavy investor search volume suggest a potential re-rating if Q2 earnings stabilize.</li>
-</ul>
-<h4 class="report-h4">2. Comcast Corporation (CMCSA)</h4>
-<ul class="report-list">
-<li>🎯 <strong>Action Classification:</strong> <code class="report-code">BUY - THEMATIC OVERLAY</code></li>
-<li>💡 <strong>Why This Stock (Quantitative Thesis):</strong> With a 5.5% dividend yield and a P/B of 0.93, CMCSA is a classic deep-value play. Despite a high PEG, the low valuation relative to book value provides a significant margin of safety.</li>
-<li>💲 <strong>Trade Parameters:</strong> Current Price: <code class="report-code">$23.63</code> | Target Price: <code class="report-code">$28.50 (+20%)</code> | Stop-Loss: <code class="report-code">$21.00 (-11%)</code> | Hold Duration: <code class="report-code">18-24 Months</code>.</li>
-<li>⚠️ <strong>Why Not / Disqualifying Risk Triggers:</strong> Stagnant ROE (11.49%) and high PEG ratio suggest limited near-term growth; failure to maintain dividend coverage is a primary risk.</li>
-<li>📰 <strong>Latest News & Catalysts:</strong> Sector-wide consolidation and competitive pressures from streaming services remain the primary headwinds.</li>
-</ul>
-<h3 class="report-h3">Strategy 2: Secular Growth & Velocity Overlay (High ROE / Momentum)</h3>
-<div class="report-callout callout-tip"></div>
-<blockquote class="report-quote">**Strategy Focus:** High capital appreciation velocity, secular technology tailwinds, accelerating EPS growth, and technical price leadership.</blockquote>
-<h4 class="report-h4">1. Microsoft Corporation (MSFT)</h4>
-<ul class="report-list">
-<li>🎯 <strong>Action Classification:</strong> <code class="report-code">BUY - THEMATIC OVERLAY</code></li>
-<li>💡 <strong>Why This Stock (Quantitative Thesis):</strong> MSFT exhibits elite-tier ROE (34.01%) and massive net profit ($125.21B). It remains a technical leader with RSI (72.64) confirming strong momentum.</li>
-<li>💲 <strong>Trade Parameters:</strong> Current Price: <code class="report-code">$455.23</code> | Target Price: <code class="report-code">$550.00 (+20%)</code> | Stop-Loss: <code class="report-code">$410.00 (-10%)</code> | Hold Duration: <code class="report-code">12 Months</code>.</li>
-<li>⚠️ <strong>Why Not / Disqualifying Risk Triggers:</strong> High P/E (27.29) makes it sensitive to interest rate hikes; any deceleration in cloud revenue growth is a critical sell trigger.</li>
-<li>📰 <strong>Latest News & Catalysts:</strong> Record cloud revenue and successful AI integration continue to drive institutional inflows.</li>
-</ul>
-<h4 class="report-h4">2. GoDaddy Inc. (GDDY)</h4>
-<ul class="report-list">
-<li>🎯 <strong>Action Classification:</strong> <code class="report-code">ACCUMULATE - THEMATIC OVERLAY</code></li>
-<li>💡 <strong>Why This Stock (Quantitative Thesis):</strong> Exceptional ROE (398.21%) and a low PEG (0.68) highlight its status as a high-growth, undervalued asset.</li>
-<li>💲 <strong>Trade Parameters:</strong> Current Price: <code class="report-code">$99.04</code> | Target Price: <code class="report-code">$135.00 (+36%)</code> | Stop-Loss: <code class="report-code">$85.00 (-14%)</code> | Hold Duration: <code class="report-code">6-12 Months</code>.</li>
-<li>⚠️ <strong>Why Not / Disqualifying Risk Triggers:</strong> High P/B (55.36) indicates extreme premium; AI disruption concerns mentioned in recent news could lead to margin compression.</li>
-<li>📰 <strong>Latest News & Catalysts:</strong> Market volatility following AI-related margin concerns provides a potential entry point for long-term growth investors.</li>
-</ul>
-<h3 class="report-h3">Strategy 3: Fortress Quality & Capital Preservation Overlay (Moats & Cash Flow)</h3>
-<div class="report-callout callout-tip"></div>
-<blockquote class="report-quote">**Strategy Focus:** Low volatility (Beta < 0.80), balance sheet integrity, recession resilience, and durable economic moats.</blockquote>
-<h4 class="report-h4">1. Cencora, Inc. (COR)</h4>
-<ul class="report-list">
-<li>🎯 <strong>Action Classification:</strong> <code class="report-code">HOLD - THEMATIC OVERLAY</code></li>
-<li>💡 <strong>Why This Stock (Quantitative Thesis):</strong> COR maintains a massive ROE (107.13%) and strong institutional backing (59.35%). It serves as a defensive pillar in the healthcare supply chain.</li>
-<li>💲 <strong>Trade Parameters:</strong> Current Price: <code class="report-code">$312.79</code> | Target Price: <code class="report-code">$360.00 (+15%)</code> | Stop-Loss: <code class="report-code">$280.00 (-10%)</code> | Hold Duration: <code class="report-code">24 Months</code>.</li>
-<li>⚠️ <strong>Why Not / Disqualifying Risk Triggers:</strong> P/E of 23.95 is relatively high for a defensive play; any disruption in pharmaceutical distribution margins would be a negative catalyst.</li>
-<li>📰 <strong>Latest News & Catalysts:</strong> Consistent earnings performance and steady dividend payments reinforce its status as a capital preservation asset.</li>
-</ul>
-<h2 class="report-h2">👀 4. High-Conviction Watchlist Candidates</h2>
-<p class="report-p">1. <strong>MSFT (Microsoft):</strong> Target Entry: $440.00 | RSI Trigger: < 60 | Reason: AI infrastructure dominance and cloud scale.</p>
-<p class="report-p">2. <strong>PYPL (PayPal):</strong> Target Entry: $52.00 | RSI Trigger: < 65 | Reason: Strong ROE (24.5%) and improving technical momentum.</p>
-<p class="report-p">3. <strong>CINF (Cincinnati Financial):</strong> Target Entry: $165.00 | RSI Trigger: < 40 | Reason: Strong net income and value-oriented insurance sector play.</p>
-<h2 class="report-h2">⚠️ 5. Strong Sells & Risk Traps to Avoid</h2>
-<p class="report-p">1. <strong>APP (AppLovin):</strong> High P/B (57.23) and negative MACD trend indicate a potential technical breakdown; high cash burn relative to growth is a major concern.</p>
-<p class="report-p">2. <strong>LVS (Las Vegas Sands):</strong> High P/B (55.35) and recent analyst downgrades suggest the stock is overextended; high Put-Call ratio (1.37) signals institutional bearishness.</p>
-<p class="report-p">3. <strong>ROST (Ross Stores):</strong> High P/E (35.19) and high Put-Call ratio (1.27) suggest the stock is priced for perfection in a retail environment facing significant headwinds.</p>
-<h2 class="report-h2">⚖️ 6. SEC & FINRA Regulatory Compliance, AI Generation & Disclaimer</h2>
+        <p class="report-p"># Weekly Institutional Market Report: U.S. Equities</p>
+<p class="report-p"><strong>Date:</strong> July 30, 2026</p>
+<p class="report-p"><strong>Market Stance:</strong> Quantitative Output (Alpha Engine v2.0)</p>
+<p class="report-p"><strong>Target Exchange Universe:</strong> U.S. Stock Exchanges (NYSE & NASDAQ)</p>
+<p class="report-p">---</p>
+<div class="report-callout callout-note"></div>
+<blockquote class="report-quote">**Publisher's Exemption:** All strategy overlays below represent impersonal, general quantitative market commentary published under the SEC Publisher's Exemption (*Lowe v. SEC*, 472 U.S. 181).</blockquote>
+<h2 class="report-h2">📊 1. Quantitative Screening Methodology</h2>
+<p class="report-p">Our stock selection methodology enforces strict quantitative equations across 4 core dimensions:</p>
+<p class="report-p">1. <strong>Return Quality Dissection:</strong> exact ROE decomposition and WACC spread hurdle.</p>
+<p class="report-p">2. <strong>Quality of Earnings (Sloan Ratio):</strong> Identifies Accrual Anomalies. Strict [-10%, 10%] band.</p>
+<p class="report-p">3. <strong>Dynamic Macro Swapping:</strong> Automatically pivots weights based on 10Y Treasury and VIX readings.</p>
+<p class="report-p">4. <strong>Microstructure & 99% Parametric VaR:</strong> Drops highly correlated pairs (r > 0.75) and scales exposure based on portfolio VaR.</p>
+<p class="report-p">---</p>
+<h2 class="report-h2">💼 2. Ranked Quantitative Output (Top 10)</h2>
+<p class="report-p">*No candidates passed the strict quantitative criteria today.*</p>
+<p class="report-p">---</p>
+<h2 class="report-h2">🛑 3. Stop-Loss Breaches & Radical Transparency</h2>
+<div class="report-callout callout-warning"></div>
+<blockquote class="report-quote">**Post-Mortem Tracking:** The following legacy recommendations have breached their volatility stops and are officially downgraded to SELL.</blockquote>
+<p class="report-p">*(See Transparency Log below for historical triggers)*</p>
+<p class="report-p">---</p>
+<h2 class="report-h2">⚖️ 4. SEC & FINRA Regulatory Compliance Disclaimer</h2>
 <div class="report-callout callout-important"></div>
-<blockquote class="report-quote">**Regulatory Compliance:** This report is provided for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any securities. This content is published under the SEC Publisher's Exemption as established in *Lowe v. SEC*, as it provides general market commentary and not personalized investment advice.</blockquote>
-<p class="report-p">></p>
-<blockquote class="report-quote">**AI Generation Notice:** This report was generated by an AI model based on raw data inputs. While the data is sourced from market feeds, the analysis is algorithmic and should not be considered professional financial advice.</blockquote>
-<p class="report-p">></p>
-<blockquote class="report-quote">**Disclaimer:** All investments involve risk, including the loss of principal. Past performance is not indicative of future results. The strategies discussed may not be suitable for all investors. Always conduct your own due diligence or consult with a licensed financial advisor before executing trades. No guarantees are made regarding the accuracy or completeness of the information provided.</blockquote>
+<blockquote class="report-quote">**Impersonal Educational Research, AI Generation Notice & SEC Publisher's Exemption**</blockquote>
+<blockquote class="report-quote">This document is published solely for educational, informational, and quantitative research purposes in accordance with the SEC Publisher's Exemption (*Lowe v. SEC*, 472 U.S. 181 (1985)).</blockquote>
+<blockquote class="report-quote">- **Automated Generation:** This report is completely programmatic and deterministic. It is NOT human financial advice.</blockquote>
+<blockquote class="report-quote">- **No Guarantees:** THERE ARE NO GUARANTEES OF ACCURACY, PROFITABILITY, OR PERFORMANCE.</blockquote>
       </div>
     </div>
   </section>
